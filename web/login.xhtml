@@ -2,7 +2,10 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+
     <ui:define name="title">Autenticando</ui:define>
     <ui:define name="content">
         <c:choose>
@@ -11,21 +14,22 @@
                 
                 <h:form class="form-box">
                     <h2>LOG IN</h2>
+                    
                     <div class="email">
                         
-                         <h:inputText value="#{login.email}"/>
+                         <h:inputText styleClass="email2" value="#{login.email}" p:placeholder="Introduce email" />
                         
                         
                         
                     </div>
                            
                     <div class="email">
-                            <h:inputSecret value="#{login.contrasenia}"/>
+                            <h:inputSecret styleClass="email2" value="#{login.contrasenia}" p:placeholder="Introduce contraseña" />
                        
                     </div>
                             
                     <div class="boton">
-                                <h:commandButton  value="Iniciar sesión" action="#{login.autenticar()}"/>
+                                <h:commandButton  styleClass="email2" value="Iniciar sesión" action="#{login.autenticar()}"/>
                             
                     </div>
                    
