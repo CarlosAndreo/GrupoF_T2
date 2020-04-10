@@ -1,12 +1,55 @@
-body {
-    background-color: #ffffff;
-    font-size: 12px;
-    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
-    color: #000000;  
-    margin: 0px;
-    width: 100%
+body,html{
+    height: 100%;
+}
+body{
+    margin:0;
+    padding: 0;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-box{
+   width: 400px;
+   height: 400px;
+   background: #0099e0;
+   text-align: center;
+   align-items: center;
+   border-radius: 20px;
+}
+.logoUMA{
+    margin-top:  100px;
+    padding-top: 100px 
+   
 }
 
+
+.email{
+    margin: 60px;
+    border-radius: 10px;
+    background-color: white;
+   
+    
+}
+.boton{
+     margin: 60px;
+    border-radius: 10px;
+    background-color: white;
+}
+h2{
+    margin: 60px;
+    padding: 0px;
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    border-bottom: 1px solid #AFAFAF; 
+    
+   
+    
+}
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     border-bottom: 1px solid #AFAFAF; 
@@ -16,7 +59,14 @@ h1 {
     padding: 0px;
     color: #D20005;
 }
-
+.letraApS{
+    
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+    
+    
+}
 a:link, a:visited {
   color: #045491;
   font-weight : bold;

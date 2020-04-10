@@ -15,11 +15,17 @@
 
     <h:body>
         <div id="top" class="top">
-            <div id="logo" class="logo"><img alt="Logo de ACOES" align="center" src="./resources/img/logo.png"/></div>
+            
+            <div class="LogoUMA">
+            <center>
+    
+                <img alt="Logo UMA" align="center" width="200" height="100" src="./resources/img/UMA.png"/>
+            </center>
+            </div>
             <h:form id="menu">
                 <ul class="menulist">
                     <c:if test="#{controlAutorizacion.usuario.rol != null}">
-                    <li><h:commandLink action="#{controlAutorizacion.home()}" value="Inicio"/></li>
+                    <li><h:commandLink action="#{controlAutorizacion.home()}" value="INICIO"/></li>
                     </c:if>
                     
                     <!-- OPCIONES PARA SOCIO-->
@@ -29,19 +35,28 @@
                         <li><h:commandLink action="#{controlAutorizacion.ListaEnvios()}" value="Listar envíos"/></li>
 
                     </c:if>
+                    
+                    <c:if test="#{controlAutorizacion.usuario.rol == 'PDI'}">
+                        <li><h:commandLink action="#{controlAutorizacion.MisDatos()}" value="Mis datos"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.NinosApadrinados()}" value="Niños apadrinados"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.ListaEnvios()}" value="Listar envíos"/></li>
+
+                    </c:if>
                    
                     
-                    <!-- OPCIONES PARA ADMINISTRADOR-->
-                    <c:if test="#{controlAutorizacion.usuario.rol == 'ADMINISTRADOR'}">
-                        <li><h:commandLink action="#{controlAutorizacion.ListaSocios()}" value="Lista socios"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.ListaNinos()}" value="Lista niños"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.NinosApadrinados()}" value="Apadrinamientos"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="Cuotas"/></li>
+                    <!-- OPCIONES PARA GESTOR-->
+                    <c:if test="#{controlAutorizacion.usuario.rol == 'GESTOR'}">
+                        <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.ListaNinos()}" value="NOTICIAS"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.NinosApadrinados()}" value="SOLICITUDES"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="INSCRIPCIONES"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
+                          <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="MI PERFIL"/></li>
                     </c:if>
                     
                     <!-- ULTIMA OPCIÓN PARA SALIR -->
                     <c:if test="#{!empty controlAutorizacion.usuario}">
-                        <li><h:commandLink action="#{controlAutorizacion.logout()}" value="Salir"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.logout()}" value="SALIR"/></li>
                     </c:if>
                 </ul>
             </h:form>
@@ -52,7 +67,7 @@
         </div>
         
         <div id="footer" class="footer">
-            <p>Desing by Thinks 2.0 | Todos los derechos reservados.<br/> <b>Universidad de Málaga.</b></p>
+            Design by GRUPO F | Todos los derechos reservados<br/>Sistemas de Información para Internet<br/><b>Universidad de Málaga</b>
         </div>
     </h:body>
 </html>

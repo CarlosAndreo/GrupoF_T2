@@ -9,10 +9,15 @@
             <c:when test="#{controlAutorizacion.usuario.rol == 'ALUMNO'}">
                  <h1>Página de inicio.</h1>
                 <h2 align="center">MODO ALUMNO</h2>
-                  <img id="scl" src="./resources/img/r_inicio.png"></img>
+                  <img id="scl" src="./resources/img/logoApS.png"></img>
             </c:when>
             
                 
+             <c:when test="#{controlAutorizacion.usuario.rol == 'PDI'}">
+                 <h1>Página de inicio.</h1>
+                <h2 align="center">MODO PDI</h2>
+                  <img id="scl" src="./resources/img/logoApS.png"></img>
+            </c:when>
                  <!--
                  <p>Apellido: Rodriguez</p>  
                  <p>Estado: Casado</p>
@@ -32,10 +37,10 @@
                 <h:button outcome="cuota.xhtml" value="Mi Cuota"/>
                  <h:button outcome="apadrinar.xhtml" value="Apadrinar"/>-->
             
-            <c:when test="#{controlAutorizacion.usuario.rol == 'ADMINISTRADOR'}">
+            <c:when test="#{controlAutorizacion.usuario.rol == 'GESTOR'}">
                  <h1>Página de inicio.</h1>
-                <h2 align="center">MODO ADMINISTRADOR</h2>
-                  <img id="scl" src="./resources/img/r_inicio.png"></img>
+                <h2 align="center">MODO GESTOR</h2>
+                  <img id="scl" src="./resources/img/logoApS.png"></img>
             </c:when>
            
             <c:otherwise>

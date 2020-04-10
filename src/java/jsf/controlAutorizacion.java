@@ -34,6 +34,9 @@ public class controlAutorizacion implements Serializable {
         return socios;
     }
     */
+    public String CRUDActividades(){
+        return "CRUDActividades.xhtml";
+    }
     public String ListaSocios(){
         return "listasocios.xhtml";
     }
@@ -57,20 +60,26 @@ public class controlAutorizacion implements Serializable {
     public String ListaEnvios(){
         return "envio.xhtml";
     }
-
+    
+public String ApS(){
+    return "ApS.xhtml";
+}
     public String home() {
         // Devuelve la página Home dependiendo del rol del usuario
         if(getUsuario()==null){
             return "login.xhtml";
         }
         
-        if(getUsuario().getRol().equals(getUsuario().getRol().ADMINISTRADOR)){
+        if(getUsuario().getRol().equals(getUsuario().getRol().GESTOR)){
             return "inicio.xhtml";
         }
         
        
         
            if(getUsuario().getRol().equals(getUsuario().getRol().ALUMNO)){
+            return "inicio.xhtml";
+        }
+             if(getUsuario().getRol().equals(getUsuario().getRol().PDI)){
             return "inicio.xhtml";
         }
         return null;

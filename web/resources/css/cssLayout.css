@@ -1,14 +1,23 @@
 #top {
     position: relative;
-    background-color: #0099e0;
+    background-color: yellowgreen;
     color: white;
     height: 7em;
     margin: 0px 0px 10px 0px;
     width: 100%;
+    
+    /*/Esto es la barra de menu negra/*/
+    margin-bottom: 25px;
+    
 }
 
 #menu {
     text-align: center;
+    
+    
+
+    
+  
 }
 
 #login {
@@ -18,15 +27,15 @@
 
 #logo {
     padding: 10px 0px 5px 0px;
-    text-align: center;
+    
 }
 
 #footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #0099e0;
-    color: white;
+    background-color: yellowgreen;
+    color: black;
     height: 4em;
     text-align: center;
     display: block;
@@ -58,9 +67,9 @@
     background-color: #ffffff;
     height: 460px;
     box-sizing: border-box;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     width: 100%;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
 }
 @media screen and (min-height: 470px){
     .center_content {
@@ -92,7 +101,12 @@
 ul.menulist li {
     list-style: none;
     display:inline;
-    margin: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  
+    
+    
 }
 
 #scl{
@@ -129,23 +143,23 @@ ul.menulist li {
     border: 1px solid black;
 }
 
-/* NIÑOS */
-#tablaListaNinos{
+/* ACTIVIDADES */
+#tablaListaActividades{
     width: fit-content;
     text-align: center;
     padding: 5px;
     margin: 10px;
 }
 
-.bordeTablaNinos table{
+.bordeTablaActividades table{
     border: 1px solid black;
 }
 
-.bordeTablaNinos th{
+.bordeTablaActividades th{
     border: 1px solid black;
 }
 
-.bordeTablaNinos td{
+.bordeTablaActividades td{
     border: 1px solid black;
 }
 

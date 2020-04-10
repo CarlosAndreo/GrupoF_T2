@@ -7,23 +7,31 @@
     <ui:define name="content">
         <c:choose>
             <c:when test="#{empty controlAutorizacion.usuario}">
-                <h:form id="login">
-                    <table id="login">
-                        <tr>
-                            <td>Usuario: </td>
-                            <td><h:inputText value="#{login.usuario}"/></td>
-                        </tr>
-                        <tr>
-                            <td>Contraseña: </td>
-                            <td><h:inputSecret value="#{login.contrasenia}"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <h:commandButton value="Iniciar sesión" action="#{login.autenticar()}"/>
-                            </td>
-                        </tr>
-                    </table>
+                <center>
+                
+                <h:form class="form-box">
+                    <h2>LOG IN</h2>
+                    <div class="email">
+                        
+                         <h:inputText value="#{login.email}"/>
+                        
+                        
+                        
+                    </div>
+                           
+                    <div class="email">
+                            <h:inputSecret value="#{login.contrasenia}"/>
+                       
+                    </div>
+                            
+                    <div class="boton">
+                                <h:commandButton  value="Iniciar sesión" action="#{login.autenticar()}"/>
+                            
+                    </div>
+                   
                 </h:form>
+                        
+                </center>
             </c:when>
             <c:otherwise>
                 <p>Debe salir de la aplicación si quiere entrar como otro usuario</p>

@@ -20,13 +20,13 @@ import javax.inject.Inject;
 
 /**
  *
- * @author grupof
+ * @author francis
  */
 @Named(value = "login")
 @RequestScoped
 public class Login {
 
-    private String usuario;
+    private String email;
     private String contrasenia;
     private List<Usuario> usuarios;
     
@@ -39,8 +39,10 @@ public class Login {
     public Login() {
         usuarios = new ArrayList<Usuario>();
       
-       usuarios.add(new Usuario("paco45","pass",Rol.ALUMNO));
-       usuarios.add(new Usuario("bd","bd",Rol.ALUMNO));
+       usuarios.add(new Usuario("paco@mail.com","pass",Rol.ALUMNO));
+       usuarios.add(new Usuario("roberto@uma.es","bd",Rol.ALUMNO));
+       usuarios.add(new Usuario("ad@hotmail.es","ad",Rol.PDI));
+       usuarios.add(new Usuario("bd@mail.com","bd",Rol.GESTOR));
         
     }
     
@@ -49,17 +51,19 @@ public class Login {
         return this.usuarios;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getEmail() {
+        return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
     public String getContrasenia() {
         return contrasenia;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
 
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
@@ -76,7 +80,7 @@ public class Login {
         while(iter.hasNext() && !user){
             usuario = iter.next();
             
-            if(usuario.getNombreUsuario().equals(getUsuario())){
+            if(usuario.getEmail().equals(getEmail())){
                 user = true;
                 if(usuario.getPassword().equals(getContrasenia())){
                     pass = true;

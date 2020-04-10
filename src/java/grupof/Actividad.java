@@ -42,6 +42,42 @@ public class Actividad implements Serializable {
     @OneToMany
     private List<Asignatura> Asignaturas;
     
+    
+    public Actividad(){
+        
+    }
+
+    public Actividad(Long CodActividad, Integer Puntuacion, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String EstadoActividad, String TipoActividad, String NombreActividad, String EstadoSolicitud, List<ParticipacionEnActividad> participantes, List<ValoracionPublica> Valoracion, List<Matching> matching, List<Asignatura> Asignaturas) {
+        this.CodActividad = CodActividad;
+        this.Puntuacion = Puntuacion;
+        this.FechaInicio = FechaInicio;
+        this.FechaFin = FechaFin;
+        this.Localizacion = Localizacion;
+        this.Descripcion = Descripcion;
+        this.CapacidadesNecesarias = CapacidadesNecesarias;
+        this.EstadoActividad = EstadoActividad;
+        this.TipoActividad = TipoActividad;
+        this.NombreActividad = NombreActividad;
+        this.EstadoSolicitud = EstadoSolicitud;
+        this.participantes = participantes;
+        this.Valoracion = Valoracion;
+        this.matching = matching;
+        this.Asignaturas = Asignaturas;
+    }
+
+    public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String TipoActividad, String EstadoActividad) {
+        this.CodActividad = CodActividad;
+        this.FechaInicio = FechaInicio;
+        this.FechaFin = FechaFin;
+        this.Localizacion = Localizacion;
+        this.Descripcion = Descripcion;
+        this.CapacidadesNecesarias = CapacidadesNecesarias;
+        this.EstadoActividad = EstadoActividad;
+        this.TipoActividad = TipoActividad;
+        this.NombreActividad = NombreActividad;
+    }
+    
+    
     public Long getCodActividad() {
         return CodActividad;
     }

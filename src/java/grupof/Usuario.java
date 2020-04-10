@@ -23,14 +23,13 @@ public class Usuario implements Serializable {
 
     
     public enum Rol{
-        ADMINISTRADOR,PDI,PAS,ALUMNO
+        PDI,PAS,ALUMNO,GESTOR
     };
     
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long UserID;
-    private String nombreUsuario;
     private String Nombre;
     private String Apellidos;
     private String Password;
@@ -60,19 +59,13 @@ public class Usuario implements Serializable {
     public Usuario(){
         
     }
-    public Usuario(String nombreUsuario,String pass,Rol tipo){
-        setNombreUsuario(nombreUsuario);
+    public Usuario(String email,String pass,Rol tipo){
+        setEmail(email);
         setPassword(pass);
         setRol(tipo);
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
+  
     public Long getUserID() {
         return UserID;
     }
