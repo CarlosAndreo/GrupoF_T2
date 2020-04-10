@@ -28,14 +28,23 @@ body{
 
 
 .email{
-    margin: 60px;
+    
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+   
+    
+}
+
+.email2{
+    margin: 20px;
     border-radius: 10px;
     background-color: white;
    
     
 }
 .boton{
-     margin: 60px;
+     margin: 20px;
     border-radius: 10px;
     background-color: white;
 }
