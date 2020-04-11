@@ -23,6 +23,10 @@ public class Alumno extends Usuario implements Serializable {
     @ManyToMany //Relacion Alumno-Asignatura
     @JoinTable(name="jnd_alum_asig",joinColumns=@JoinColumn(name="alumno_fk"),inverseJoinColumns=@JoinColumn(name="asignatura_fk"))
     private List<Asignatura> Asignaturas;
+
+    public Alumno(String nombre, String apellidos) {
+        super(nombre, apellidos);
+    }
     
     public Long getCodUMA() {
         return UserID;

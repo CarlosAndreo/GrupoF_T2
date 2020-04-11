@@ -32,7 +32,7 @@
                     <c:if test="#{controlAutorizacion.usuario.rol == 'ALUMNO'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ListaNinos()}" value="NOTICIAS"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.NinosApadrinados()}" value="SOLICITUDES"/></li>
+                      
                         <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="INSCRIPCIONES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
                          <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="MI PERFIL"/></li>
@@ -54,7 +54,7 @@
                     <c:if test="#{controlAutorizacion.usuario.rol == 'GESTOR'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ListaNinos()}" value="NOTICIAS"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.NinosApadrinados()}" value="SOLICITUDES"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.ParticipacionActividad()}" value="SOLICITUDES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="INSCRIPCIONES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
                           <li><h:commandLink action="#{controlAutorizacion.Cuotas()}" value="MI PERFIL"/></li>

@@ -32,6 +32,7 @@ public class Actividad implements Serializable {
     private String TipoActividad;
     private String NombreActividad;
     private String EstadoSolicitud;
+    private Usuario nombreUsuario;
     @OneToMany
     private List<ParticipacionEnActividad> participantes;
     @OneToMany
@@ -41,7 +42,6 @@ public class Actividad implements Serializable {
     private List<Matching> matching;
     @OneToMany
     private List<Asignatura> Asignaturas;
-    
     
     public Actividad(){
         
@@ -65,6 +65,8 @@ public class Actividad implements Serializable {
         this.Asignaturas = Asignaturas;
     }
 
+   
+
     public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String TipoActividad, String EstadoActividad) {
         this.CodActividad = CodActividad;
         this.FechaInicio = FechaInicio;
@@ -77,6 +79,16 @@ public class Actividad implements Serializable {
         this.NombreActividad = NombreActividad;
     }
     
+    public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, Usuario NombreUsuario, String EstadoActividad){
+        this.CodActividad = CodActividad;
+        this.NombreActividad = NombreActividad;
+        this.FechaFin = FechaFin;
+        this.FechaInicio = FechaInicio;
+        this.nombreUsuario = NombreUsuario;
+        this.EstadoActividad = EstadoActividad;
+    }
+
+  
     public void SetVariables(String NombreActividad, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String TipoActividad, String EstadoActividad){
         this.FechaInicio = FechaInicio;
         this.FechaFin = FechaFin;
@@ -207,7 +219,14 @@ public class Actividad implements Serializable {
     public void setAsignaturas(List<Asignatura> Asignaturas) {
         this.Asignaturas = Asignaturas;
     }
+  
+      public Usuario getNombreUsuario() {
+        return nombreUsuario;
+    }
 
+    public void setNombreUsuario(Usuario nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
     @Override
     public int hashCode() {
         int hash = 0;

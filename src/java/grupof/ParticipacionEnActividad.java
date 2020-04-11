@@ -34,6 +34,7 @@ public class ParticipacionEnActividad implements Serializable {
     private Integer HorasDedicadas;
     private String Observaciones;
     private String Estado;
+    
 
     public Date getFecha() {
         return Fecha;

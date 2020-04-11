@@ -20,6 +20,10 @@ public class PAS extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long UserID;
 
+    public PAS(String nombre, String apellidos) {
+        super(nombre, apellidos);
+    }
+
     public Long getCodPAS() {
         return UserID;
     }

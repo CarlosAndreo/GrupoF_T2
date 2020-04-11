@@ -42,7 +42,7 @@ public CRUDActividadesController() throws ParseException{
     SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
     
     actividades.add(new Actividad(new Long(1),"Hands on Kuala Lumpur",dateformat3.parse("21/11/2020"),dateformat3.parse("25/11/2020"),"Kuala Lumpur","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
-     actividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("23/02/2020"),dateformat3.parse("25/03/2020"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
+    actividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("04/07/2020"),dateformat3.parse("25/03/2021"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
     
 }
 
@@ -71,9 +71,9 @@ public CRUDActividadesController() throws ParseException{
  
  public String modificarVariables(int id,String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
      
-     getById(id).SetVariables("pp", getById(id).getFechaInicio(), FechaFin, local, desc, desc, tipo, "abierta");
+    getById(id).SetVariables("pp", getById(id).getFechaInicio(), FechaFin, local, desc, desc, tipo, "abierta");
      
-     return "CRUDActividades.xhtml";
+    return "CRUDActividades.xhtml";
      
  }
 public String home(){

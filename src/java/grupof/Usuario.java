@@ -21,6 +21,10 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Usuario implements Serializable {
 
+    Usuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     public enum Rol{
         PDI,PAS,ALUMNO,GESTOR
@@ -56,8 +60,10 @@ public class Usuario implements Serializable {
     private List<ValoracionPublica> valoracionesPublicas;
     
     
-    public Usuario(){
-        
+    public Usuario( String nombre, String apellidos){
+     
+        setNombre(nombre);
+        setApellidos(apellidos);
     }
     public Usuario(String email,String pass,Rol tipo){
         setEmail(email);

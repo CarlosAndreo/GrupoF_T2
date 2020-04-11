@@ -71,6 +71,10 @@ public class controlAutorizacion implements Serializable {
         return "envio.xhtml";
     }
     
+    public String ParticipacionActividad(){
+        return "participacionActividad.xhtml";
+    }
+    
 public String ApS(){
     return "ApS.xhtml";
 }
