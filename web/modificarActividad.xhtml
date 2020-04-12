@@ -18,6 +18,7 @@
                         <td>Código de Actividad: #{i.codActividad}</td>
                         <tr>
                             <td>Nombre Actividad: </td>
+
                             <td><h:inputText  value="#{i.nombreActividad}"/></td>
                         </tr>
 
@@ -61,7 +62,7 @@
                     </table>
                 </h:form>
                 <h:form> 
-                    <h:column> <h:commandButton value="Actualizar Actividad" action="#{ListaActividades.modificarVariables(i.codActividad,i.nombreActividad, i.fechaInicio, i.fechaFin, i.localizacion, i.descripcion, i.capacidadesNecesarias, i.tipoActividad, i.estadoActividad)}"/> </h:column> 
+                    <h:column> <h:commandButton value="Actualizar Actividad" action="#{ListaActividades.modificarVariables(i.codActividad, i.nombreActividad, i.fechaInicio, i.fechaFin,i.localizacion,i.descripcion, i.capacidadesNecesarias, i.tipoActividad, i.estadoActividad)}"/> </h:column> 
                     <h:column> <h:commandButton value="Cancelar" action="CRUDActividades.xhtml" /> </h:column> 
                 </h:form>
                  

@@ -90,14 +90,16 @@ public class Actividad implements Serializable {
 
   
     public void SetVariables(String NombreActividad, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String TipoActividad, String EstadoActividad){
+         this.NombreActividad = NombreActividad;
         this.FechaInicio = FechaInicio;
         this.FechaFin = FechaFin;
         this.Localizacion = Localizacion;
         this.Descripcion = Descripcion;
         this.CapacidadesNecesarias = CapacidadesNecesarias;
-        this.EstadoActividad = EstadoActividad;
         this.TipoActividad = TipoActividad;
-        this.NombreActividad = NombreActividad;   
+        this.EstadoActividad = EstadoActividad;
+        
+          
     }
     
     public Long getCodActividad() {

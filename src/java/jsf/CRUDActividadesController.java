@@ -43,7 +43,7 @@ public CRUDActividadesController() throws ParseException{
     
     actividades.add(new Actividad(new Long(1),"Hands on Kuala Lumpur",dateformat3.parse("21/11/2020"),dateformat3.parse("25/11/2020"),"Kuala Lumpur","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
     actividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("04/07/2020"),dateformat3.parse("25/03/2021"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
-    
+    actividad = new Actividad();
 }
 
     public ArrayList<Actividad> getActividades() {
@@ -69,13 +69,29 @@ public CRUDActividadesController() throws ParseException{
  return actividades.get(id);
  }
  
- public String modificarVariables(int id,String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
+     public String modificarVariables(int id,String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
      
-    getById(id).SetVariables("pp", getById(id).getFechaInicio(), FechaFin, local, desc, desc, tipo, "abierta");
+    getById(id).SetVariables(nombre, fechaInicio, FechaFin, local, desc, desc, tipo, estado);
      
     return "CRUDActividades.xhtml";
      
  }
+     public String verActividad(){
+         return "verActividad.xhtml";
+     }
+     
+     public String crearActividad(){
+         return "crearActividad.xhtml";
+     }
+
+    public Actividad getActividad() {
+        return actividad;
+    }
+
+    public void setActividad(Actividad actividad) {
+        this.actividad = actividad;
+    }
+     
 public String home(){
     //No inicia sesion
     if(getUsuario()==null){
