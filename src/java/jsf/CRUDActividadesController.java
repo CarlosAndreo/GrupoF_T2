@@ -43,7 +43,7 @@ public CRUDActividadesController() throws ParseException{
     
     actividades.add(new Actividad(new Long(1),"Hands on Kuala Lumpur",dateformat3.parse("21/11/2020"),dateformat3.parse("25/11/2020"),"Kuala Lumpur","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
     actividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("04/07/2020"),dateformat3.parse("25/03/2021"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
-    actividad = new Actividad();
+  
 }
 
     public ArrayList<Actividad> getActividades() {
@@ -67,6 +67,14 @@ public CRUDActividadesController() throws ParseException{
  
  public Actividad getById(int id){
  return actividades.get(id);
+ }
+ 
+ public String create(String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
+      SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
+     
+       actividad = new Actividad(new Long(actividades.size()+1),nombre,fechaInicio,FechaFin,local,desc,capNec,tipo,estado);
+       actividades.add(actividad);
+       return "CRUDActividades.xhtml";
  }
  
      public String modificarVariables(int id,String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
