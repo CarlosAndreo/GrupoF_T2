@@ -25,7 +25,7 @@ public class Noticia implements Serializable {
     private Long CodNoticia;
     private String Titulo;
     private String Descripcion;
-
+   
     public Long getCodNoticia() {
         return CodNoticia;
     }

@@ -47,37 +47,22 @@ public class controlAutorizacion implements Serializable {
     public String CRUDActividades(){
         return "CRUDActividades.xhtml";
     }
-    public String ListaSocios(){
-        return "listasocios.xhtml";
-    }
-    
-    public String ListaNinos(){
-        return "listaninos.xhtml";
-    }
-    
-    public String NinosApadrinados(){
-        return "listaninosapadrinados.xhtml";
-    }
-    
-    public String Cuotas(){
-        return "listacuotas.xhtml";
-    }
-    
-    public String MisDatos(){
-        return "socio.xhtml";
-    }
-    
-    public String ListaEnvios(){
-        return "envio.xhtml";
-    }
     
     public String ParticipacionActividad(){
         return "participacionActividad.xhtml";
     }
     
-public String ApS(){
-    return "ApS.xhtml";
-}
+    public String Noticias(){
+        return "noticias.xhtml";
+    }
+    
+    public String ApS(){
+        return "ApS.xhtml";
+    }
+    
+    public String porRealizar(){
+        return "inicio.xhtml";
+    }
     public String home() {
         // Devuelve la página Home dependiendo del rol del usuario
         if(getUsuario()==null){
@@ -87,15 +72,15 @@ public String ApS(){
         if(getUsuario().getRol().equals(getUsuario().getRol().GESTOR)){
             return "inicio.xhtml";
         }
-        
-       
-        
-           if(getUsuario().getRol().equals(getUsuario().getRol().ALUMNO)){
+  
+        if(getUsuario().getRol().equals(getUsuario().getRol().ALUMNO)){
             return "inicio.xhtml";
         }
-             if(getUsuario().getRol().equals(getUsuario().getRol().PDI)){
+        
+        if(getUsuario().getRol().equals(getUsuario().getRol().PDI)){
             return "inicio.xhtml";
         }
+        
         return null;
     }
     
