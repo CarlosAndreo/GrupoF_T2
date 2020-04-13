@@ -6,6 +6,7 @@
 package grupof;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +26,25 @@ public class Noticia implements Serializable {
     private Long CodNoticia;
     private String Titulo;
     private String Descripcion;
+    private Date fecha;
+    
+    //public void crearNoticia()
    
+    public Noticia(Long CodNoticia, String Titulo, String Descripcion, Date fecha){
+        this.CodNoticia= CodNoticia;
+        this.Titulo = Titulo;
+        this.Descripcion = Descripcion;
+        this.fecha = fecha;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+    
     public Long getCodNoticia() {
         return CodNoticia;
     }

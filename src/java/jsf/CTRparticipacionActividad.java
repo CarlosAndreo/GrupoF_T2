@@ -61,15 +61,4 @@ public class CTRparticipacionActividad implements Serializable{
     }
 
 
-
-    
-    
-    
-    
-    
-
-  
-
-    
-    
 }
