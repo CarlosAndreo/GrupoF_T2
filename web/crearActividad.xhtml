@@ -39,12 +39,10 @@
                         <h:inputText id ="tipo" value="#{ListaActividades.actividad.tipoActividad}"/>
                         <h:message for="tipoActividad"/>
                         
-                         <h:outputText value="estado actividad"/>
-                         <h:inputText id ="estado" value="#{ListaActividades.actividad.estadoActividad}"/>
-                        <h:message for="estadoActividad"/>
-                        
-                        
-                        
+                        <h:outputText value="estado actividad"/>
+                        <h:inputText id ="estado" value="#{ListaActividades.actividad.estadoActividad}"/>
+                        <h:message for="estadoActividad"/>        
+                       
                         <h:commandButton value="Insertar nueva actividad" action="CRUDActividades.xhtml"/>
                         <h:commandButton value="Cancelar" action="CRUDActividades.xhtml"/>
                         <h:commandButton value="Limpiar" type="reset" />
@@ -52,9 +50,11 @@
                     </h:panelGrid>
                 </h:form>
             </c:when>
+           
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>
+            
         </c:choose> 
     </ui:define>
 </ui:composition>

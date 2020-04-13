@@ -9,8 +9,7 @@
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
-               
-            
+    
                 <h1 var = "i" value="#{ListaActividades.actividades}">Modificar Actividad</h1>
                 
                 <h:form id="ListaActividades">
@@ -57,15 +56,13 @@
                             <td>Estado de la actividad: </td>
                             <td><h:inputText  value="#{i.estadoActividad}"/></td>
                         </tr>
-                                            
-                        
+                    
                     </table>
                 </h:form>
                 <h:form> 
                     <h:column> <h:commandButton value="Actualizar Actividad" action="#{ListaActividades.modificarVariables(i.codActividad, i.nombreActividad, i.fechaInicio, i.fechaFin,i.localizacion,i.descripcion, i.capacidadesNecesarias, i.tipoActividad, i.estadoActividad)}"/> </h:column> 
                     <h:column> <h:commandButton value="Cancelar" action="CRUDActividades.xhtml" /> </h:column> 
                 </h:form>
-                 
                 
             </c:when>
             <c:otherwise>

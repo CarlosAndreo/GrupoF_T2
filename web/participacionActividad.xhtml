@@ -39,17 +39,14 @@
                                         
                                          <h:form> <h:column> <h:commandButton value="Gestionar solicitud" action="#{ListaSolicitudes.gestionar()}"/> </h:column> </h:form>
                                     </td>
-                                   
-                                     
-                                
+                             
                             </ui:repeat>
                         </tbody>
                     </table>
                 </div>
                
             </c:when>
-            
-            
+         
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>

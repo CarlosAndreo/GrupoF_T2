@@ -7,16 +7,14 @@
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ALUMNO'}">
-                 <h1>Página de inicio.</h1>
+                <h1>Página de inicio.</h1>
                 <h2 align="center">MODO ALUMNO</h2>
-                  <img id="scl" src="./resources/img/logoApS.png"></img>
-            </c:when>
-            
-                
+                <img id="scl" src="./resources/img/logoApS.png"></img>
+            </c:when>            
              <c:when test="#{controlAutorizacion.usuario.rol == 'PDI'}">
-                 <h1>Página de inicio.</h1>
+                <h1>Página de inicio.</h1>
                 <h2 align="center">MODO PDI</h2>
-                  <img id="scl" src="./resources/img/logoApS.png"></img>
+                <img id="scl" src="./resources/img/logoApS.png"></img>
             </c:when>
                  <!--
                  <p>Apellido: Rodriguez</p>  
@@ -31,23 +29,19 @@
                  <p>Certificado: ??</p>
                  <p>Fecha de alta: 13/08/1996</p>
                  <p>Fecha de baja 01/012/2010</p>
-                 <p>Observaciones: Impago de cuotas!</p>
-                 
-                
+                 <p>Observaciones: Impago de cuotas!</p>    
                 <h:button outcome="cuota.xhtml" value="Mi Cuota"/>
-                 <h:button outcome="apadrinar.xhtml" value="Apadrinar"/>-->
+                <h:button outcome="apadrinar.xhtml" value="Apadrinar"/>-->
             
             <c:when test="#{controlAutorizacion.usuario.rol == 'GESTOR'}">
-                 <h1>Página de inicio.</h1>
+                <h1>Página de inicio.</h1>
                 <h2 align="center">MODO GESTOR</h2>
-                  <img id="scl" src="./resources/img/logoApS.png"></img>
-            </c:when>
-                 
-                 
-                   <c:when test="#{controlAutorizacion.usuario.rol == 'PAS'}">
-                 <h1>Página de inicio.</h1>
+                <img id="scl" src="./resources/img/logoApS.png"></img>
+            </c:when> 
+            <c:when test="#{controlAutorizacion.usuario.rol == 'PAS'}">
+                <h1>Página de inicio.</h1>
                 <h2 align="center">MODO PAS</h2>
-                  <img id="scl" src="./resources/img/logoApS.png"></img>
+                <img id="scl" src="./resources/img/logoApS.png"></img>
             </c:when>
            
             <c:otherwise>

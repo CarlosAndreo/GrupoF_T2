@@ -9,10 +9,8 @@
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO'}">
-               
-            
-                <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>
-                
+        
+                <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>              
                 <h:form id="ListaActividades">
                     <table>
                         <td>Código de Actividad: #{i.codActividad}</td>
@@ -41,8 +39,7 @@
                             <td>Descripción: </td>
                             <td><h:outputText  value="#{i.descripcion}"/></td>
                         </tr>      
-                        
-                        
+                     
                         <tr>
                             <td>Capacidades necesarias: </td>
                             <td><h:outputText  value="#{i.capacidadesNecesarias}"/></td>
@@ -115,7 +112,6 @@
                                  <td>Estado de la actividad: </td>
                                  <td><h:outputText  value="#{i.estadoActividad}"/></td>
                              </tr>
-
 
                          </table>
                      </h:form>
