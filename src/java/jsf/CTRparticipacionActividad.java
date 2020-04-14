@@ -7,6 +7,7 @@ package jsf;
 
 import grupof.Actividad;
 import grupof.Alumno;
+import grupof.Organizacion;
 import grupof.ParticipacionEnActividad;
 import grupof.Usuario;
 import java.io.Serializable;
@@ -31,13 +32,14 @@ public class CTRparticipacionActividad implements Serializable{
     
     private ArrayList<Actividad> actividades;
     private Actividad actividad; 
-    private Usuario user;
+    
     
     public CTRparticipacionActividad() throws ParseException{
         actividades = new ArrayList<>();
-        user = new Usuario("Pepe", "Trol");
+        Organizacion ong = new Organizacion("Caritas");
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
-        actividades.add(new Actividad(new Long(1), "Avanzadilla al tibet", dateformat3.parse("04/07/1998"), dateformat3.parse("04/07/2020"),user, "En curso"));
+        actividades.add(new Actividad(new Long(1), "Avanzadilla al tibet", dateformat3.parse("04/07/1998"), dateformat3.parse("04/07/2020"),ong, "Sin comenzar","tibet","Es una actividad que pretende realizar una caminita hacia al tibet","Tener minimo dos piernas","Voluntariado","Pendiente"));
+        
     }
     
     public String gestionar(){

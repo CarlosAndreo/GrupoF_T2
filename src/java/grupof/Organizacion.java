@@ -32,6 +32,10 @@ public class Organizacion implements Serializable {
     private List<Actividad> Actividades;
     @OneToMany
     private List<ValoracionPrivada> valoraciones;
+    
+    public Organizacion(String nombre){
+        this.Nombre=nombre;
+    }
     public Long getCodProyecto() {
         return CodProyecto;
     }
@@ -80,6 +84,9 @@ public class Organizacion implements Serializable {
         this.valoraciones = valoraciones;
     }
     
+    public Organizacion(){
+        
+    }
     @Override
     public int hashCode() {
         int hash = 0;

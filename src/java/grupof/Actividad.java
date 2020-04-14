@@ -32,7 +32,7 @@ public class Actividad implements Serializable {
     private String TipoActividad;
     private String NombreActividad;
     private String EstadoSolicitud;
-    private Usuario nombreUsuario;
+    private Organizacion ong;
     @OneToMany
     private List<ParticipacionEnActividad> participantes;
     @OneToMany
@@ -77,15 +77,23 @@ public class Actividad implements Serializable {
         this.EstadoActividad = EstadoActividad;
         this.TipoActividad = TipoActividad;
         this.NombreActividad = NombreActividad;
+        
+        
     }
     
-    public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, Usuario NombreUsuario, String EstadoActividad){
+    
+    public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, Organizacion ong, String EstadoActividad,String Localizacion,String descripcion,String cap,String tipo, String estadoSol){
         this.CodActividad = CodActividad;
         this.NombreActividad = NombreActividad;
         this.FechaFin = FechaFin;
         this.FechaInicio = FechaInicio;
-        this.nombreUsuario = NombreUsuario;
+        this.ong=ong;
         this.EstadoActividad = EstadoActividad;
+        this.EstadoSolicitud=estadoSol;
+        this.Localizacion=Localizacion;
+        this.Descripcion=descripcion;
+        this.CapacidadesNecesarias=cap;
+        this.TipoActividad=tipo;
     }
 
   
@@ -221,14 +229,15 @@ public class Actividad implements Serializable {
     public void setAsignaturas(List<Asignatura> Asignaturas) {
         this.Asignaturas = Asignaturas;
     }
-  
-      public Usuario getNombreUsuario() {
-        return nombreUsuario;
+
+    public Organizacion getOng() {
+        return ong;
     }
 
-    public void setNombreUsuario(Usuario nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public void setOng(Organizacion ong) {
+        this.ong = ong;
     }
+  
     @Override
     public int hashCode() {
         int hash = 0;
