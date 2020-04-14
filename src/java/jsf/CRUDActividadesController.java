@@ -29,6 +29,15 @@ public class CRUDActividadesController implements Serializable{
 private ArrayList<Actividad> actividades;
 private Usuario usuario;
 private Actividad actividad;
+private Actividad a = new Actividad();
+
+    public Actividad getA() {
+        return a;
+    }
+
+    public void setA(Actividad a) {
+        this.a = a;
+    }
 
     public Usuario getUsuario() {
         return usuario;
@@ -37,6 +46,8 @@ private Actividad actividad;
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    
+   
     public CRUDActividadesController() throws ParseException{
         actividades = new ArrayList<>();
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
@@ -59,6 +70,7 @@ private Actividad actividad;
         return "CRUDActividades.xhtml";
     }
     
+    
     public String modificarActividad(){
      
         return "modificarActividad.xhtml";
@@ -75,8 +87,11 @@ private Actividad actividad;
        return "CRUDActividades.xhtml";
     }
  
-    public String modificarVariables(int id,String nombre,Date fechaInicio,Date FechaFin,String local,String desc,String capNec,String tipo,String estado){
-       getById(id).SetVariables(nombre, fechaInicio, FechaFin, local, desc, desc, tipo, estado);  
+    public String modificarVariables(int id){
+        
+      actividades.remove(id);
+      actividades.add(a);
+              
        return "CRUDActividades.xhtml";  
     }
     public String verActividad(){

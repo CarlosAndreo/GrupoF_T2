@@ -116,32 +116,6 @@ ul.menulist li {
   width: 50%;
 }
 
-#tablaListaCuotas{
-    width: fit-content;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-}
-
-/* CUOTAS */
-#tablaListaCuotas{
-    width: fit-content;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-}
-
-.bordeTablaCuotas table{
-    border: 1px solid black;
-}
-
-.bordeTablaCuotas th{
-    border: 1px solid black;
-}
-
-.bordeTablaCuotas td{
-    border: 1px solid black;
-}
 
 /* ACTIVIDADES */
 #tablaListaActividades{
@@ -160,25 +134,5 @@ ul.menulist li {
 }
 
 .bordeTablaActividades td{
-    border: 1px solid black;
-}
-
-/* SOCIOS */
-#tablaListaSocios{
-    width: fit-content;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-}
-
-.bordeTablaSocios table{
-    border: 1px solid black;
-}
-
-.bordeTablaSocios th{
-    border: 1px solid black;
-}
-
-.bordeTablaSocios td{
     border: 1px solid black;
 }
