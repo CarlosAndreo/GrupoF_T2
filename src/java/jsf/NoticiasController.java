@@ -23,9 +23,9 @@ import javax.inject.Named;
 @Named(value ="ListaNoticias")
 @SessionScoped
 public class NoticiasController implements Serializable{
-    
+    private Noticia noticiaEJB;
     private ArrayList<Noticia> noticias;
-    private Noticia noticia;
+    private Noticia noticia = new Noticia();
     
     public NoticiasController() throws ParseException{
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
@@ -45,6 +45,15 @@ public class NoticiasController implements Serializable{
         this.noticia = noticia;
     }
     
+    public String createNoticia(){
+        return "crearNoticia.xhtml";
+    }
+    public String docreateNoticia(){
+        int tam = noticias.size();
+        
+       //noticia = noticiaEJB.crearNoticia(noticia, tam);
+        return "noticias.xhtml";
+    }
     /*public String create(String Titulo, String Descripcion, Date fecha){
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
        noticia = new Noticia(new Long(noticias.size()+1), Titulo, Descripcion, fecha);

@@ -30,13 +30,24 @@ public class Noticia implements Serializable {
     
     //public void crearNoticia()
    
+    public Noticia(){
+        
+    }
     public Noticia(Long CodNoticia, String Titulo, String Descripcion, Date fecha){
         this.CodNoticia= CodNoticia;
         this.Titulo = Titulo;
         this.Descripcion = Descripcion;
         this.fecha = fecha;
     }
-
+    
+public void crearNoticia(Noticia n, int tam){
+    
+    n.setCodNoticia(new Long(tam));
+    n.setTitulo(n.Titulo);
+    n.setDescripcion(n.Descripcion);
+    n.setFecha(n.fecha);
+    
+}
     public Date getFecha() {
         return fecha;
     }
