@@ -47,6 +47,8 @@ public class Login {
        usuarios.add(new Usuario("roberto@uma.es","bd",Rol.ALUMNO));
        usuarios.add(new Usuario("ad@hotmail.es","ad",Rol.PDI));
        usuarios.add(new Usuario("bd@mail.com","bd",Rol.GESTOR));
+       usuarios.add(new Usuario("pas@mail.com","pas",Rol.PAS));
+       usuarios.add(new Usuario("ong@correo.com","ong",Rol.ORGANIZACION));
         
     }
     

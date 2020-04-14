@@ -48,12 +48,7 @@ public class NoticiasController implements Serializable{
     public String createNoticia(){
         return "crearNoticia.xhtml";
     }
-    public String docreateNoticia(){
-        int tam = noticias.size();
-        
-       //noticia = noticiaEJB.crearNoticia(noticia, tam);
-        return "noticias.xhtml";
-    }
+    
     /*public String create(String Titulo, String Descripcion, Date fecha){
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
        noticia = new Noticia(new Long(noticias.size()+1), Titulo, Descripcion, fecha);

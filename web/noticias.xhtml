@@ -9,7 +9,7 @@
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
-                <h1>CREAR NUEVA NOTICIA</h1>  <h:form> <h:column> <h:commandButton value ="Crear noticia" action="#{ListaNoticias.createNoticia()}"/></h:column></h:form>
+                <h1>LISTA NOTICIAS</h1>  <h:form> <h:column> <h:commandButton value ="Crear noticia" action="#{ListaNoticias.createNoticia()}"/></h:column></h:form>
         
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">

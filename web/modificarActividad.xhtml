@@ -16,63 +16,62 @@
                     <table>
                         <td>Código de Actividad: #{i.codActividad}</td>
                         
-                        <h1 var="a" value="#{ListaActividades.a.setCodActividad(i.codActividad)}"></h1>
                         
                         <tr>
                             <td>Nombre Actividad: </td>
 
                             <td><h:inputText  value="#{i.nombreActividad}" /></td>
-                            <h1 var="a" value="#{ListaActividades.a.setNombreActividad(i.nombreActividad)}"></h1>
+                           
                            
                         </tr>
 
                         <tr>
                             <td>Fecha Inicio: </td>
                             <td><h:inputText  value="#{i.fechaInicio}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setFechaInicio(i.fechaInicio)}"></h1>
+                          
                         </tr>
                         
                         <tr>
                             <td>Fecha Fin: </td>
                             <td><h:inputText  value="#{i.fechaFin}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setFechaFin(i.fechaFin)}"></h1>
+                            
                         </tr>
 
                         <tr>
                             <td>Localización: </td>
                             <td><h:inputText  value="#{i.localizacion}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setLocalizacion(i.localizacion)}"></h1>
+                           
                         </tr>
                         
                         <tr>
                             <td>Descripción: </td>
                             <td><h:inputText  value="#{i.descripcion}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setDescripcion(i.descripcion)}"></h1>
+                           
                         </tr>      
                         
                         
                         <tr>
                             <td>Capacidades necesarias: </td>
                             <td><h:inputText  value="#{i.capacidadesNecesarias}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setCapacidadesNecesarias(i.capacidadesNecesarias)}"></h1>
+                            
                         </tr>  
                         
                         <tr>
                             <td>Tipo de actividad: </td>
                             <td><h:inputText  value="#{i.tipoActividad}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setTipoActividad(i.tipoActividad)}"></h1>
+                            
                         </tr>  
                         
                         <tr>
                             <td>Estado de la actividad: </td>
                             <td><h:inputText  value="#{i.estadoActividad}"/></td>
-                            <h1 var="a" value="#{ListaActividades.a.setEstadoActividad(i.estadoActividad)}"></h1>
+                           
                         </tr>
                     
                     </table>
                 </h:form>
                 <h:form> 
-                    <h:column> <h:commandButton value="Actualizar Actividad" action="#{ListaActividades.modificarVariables(i.codActividad)}"/> </h:column> 
+                    <h:column> <h:commandButton value="Actualizar Actividad" action="CRUDActividades.xhtml"/> </h:column> 
                     <h:column> <h:commandButton value="Cancelar" action="CRUDActividades.xhtml" /> </h:column> 
                 </h:form>
                 

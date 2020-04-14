@@ -11,32 +11,38 @@
            
           
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+                    <h1>Crear una nueva noticia</h1>
                    
                     <h:form>
                         
                         <table border="0">
                             <tr>
                                 <td> <h:outputLabel value="Titulo:"/></td>
-                                <td><h:inputText value="#{ListaNoticias.noticia.titulo}"</td>
+                                <td><h:inputText value="#{ListaNoticias.noticia.titulo}"></h:inputText></td>
                                 
                             </tr>
                              <tr>
                                 <td> <h:outputLabel value="Descripcion"/></td>
-                                <td><h:inputText value="#{ListaNoticias.noticia.descripcion}"</td>
+                                <td><h:inputText value="#{ListaNoticias.noticia.descripcion}"></h:inputText></td>
                                 
                             </tr>
                              <tr>
                                 <td> <h:outputLabel value="Fecha:"/></td>
-                                <td><h:inputText value="#{ListaNoticias.noticia.fecha}"</td>
+                                <td><h:inputText value="#{ListaNoticias.noticia.fecha}"></h:inputText></td>
                                 
                             </tr>
                      
                         </table>
-                        <h:commandButton value="Crear noticia" action="#{ListaNoticias.docreateNoticia()}"
+                        
+                       
                     </h:form>
-                    
+                     <h:form>
+                            
+                         <h:column> <h:commandButton value="Crear noticia" action="noticias.xhtml"/>  </h:column>
+                        </h:form>
+                       
                      <h:form> 
-                       <br/>                     
+                       <br/>                   
                          <h:column> <h:commandButton value="Volver Atrás" action="noticias.xhtml" /> </h:column> 
                      </h:form>
                  

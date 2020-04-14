@@ -27,7 +27,8 @@ public class Usuario implements Serializable {
 
     
     public enum Rol{
-        PDI,PAS,ALUMNO,GESTOR
+        PDI,PAS,ALUMNO,GESTOR, ORGANIZACION
+     
     };
     
     private static final long serialVersionUID = 1L;
