@@ -60,9 +60,14 @@ public class controlAutorizacion implements Serializable {
         return "ApS.xhtml";
     }
     
+    public String perfilUsuario(){
+        return "miPerfilUsuario.xhtml";
+    }
+    
     public String porRealizar(){
         return "inicio.xhtml";
     }
+    
     public String home() {
         // Devuelve la página Home dependiendo del rol del usuario
         if(getUsuario()==null){

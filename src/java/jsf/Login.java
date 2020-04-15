@@ -10,6 +10,7 @@ import grupof.Usuario;
 import grupof.Usuario.Rol;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import javax.inject.Named;
@@ -49,7 +50,7 @@ public class Login {
        usuarios.add(new Usuario("bd@mail.com","bd",Rol.GESTOR));
        usuarios.add(new Usuario("pas@mail.com","pas",Rol.PAS));
        usuarios.add(new Usuario("ong@correo.com","ong",Rol.ORGANIZACION));
-        
+       usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", new Date(116,5,3), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
     }
     
     public List<Usuario> getUsuarios(){
