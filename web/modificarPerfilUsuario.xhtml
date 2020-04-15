@@ -8,47 +8,75 @@
     <ui:define name="title">Perfil de usuario</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO'}">
-                <h1 var = "i" value="#{PerfilUsuario.usuario}">PERFIL DE <h:outputText value="#{i.nombre.toUpperCase()} #{i.apellidos.toUpperCase()}"/></h1>
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' }">
+                <h1>PERFIL DE #{controlAutorizacion.usuario.nombre.toUpperCase()} #{controlAutorizacion.usuario.apellidos.toUpperCase()}</h1>
                 
                 <h:form id="PerfilUsuario">
-                    <table>
-                        
-                        <td>Código de usuario: #{i.UserID}</td>
-                        
-                        <td>Nombre #{i.nombre}</td>
-                        
-                        <td>Apellidos #{i.apellidos}</td>
-                        
-                        <td>DNI #{i.DNI}</td>
-                        
-                        <td>Fecha de nacimiento #{i.FechaNacimiento}</td>
-
-                        <td>Email #{i.email}</td>
-                        
-                        <td>Direccion #{i.direccion}</td>
-
+                    <table>                       
                         <tr>
-                            <td>Formacion </td>
-                            <td><h:inputText  value="#{i.formacion}"/></td>
-                        </tr>  
+                            <td>Código de usuario: </td>
 
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.userID}"/></td>
+                        </tr>
+                        
                         <tr>
-                            <td>Foto </td>
-                            <td><h:inputText  value="#{i.foto}"/></td>
-                        </tr>        
+                            <td>Nombre: </td>
 
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.nombre}"/></td>
+                        </tr>
+                        
                         <tr>
-                            <td>Telefono </td>
-                            <td><h:inputText  value="#{i.telefono}"/></td>
-                        </tr>   
+                            <td>Apellidos: </td>
 
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.apellidos}"/></td>
+                        </tr>
+                        
+                         <tr>
+                            <td>DNI: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.DNI}"/></td>
+                        </tr>      
                         <tr>
-                            <td>Idioma </td>
-                            <td><h:inputText  value="#{i.idioma}"/></td>
-                        </tr> 
+                            <td>Fecha Nacimiento: </td>
 
-                        <td>Rol #{i.Rol}</td>
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.fechaNacimiento}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Email: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.email}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Formacion: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.formacion}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Foto: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.foto}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Telefono: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.telefono}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Idioma: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.idioma}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Rol: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
+                        </tr>
                     </table>
                 </h:form>
                 <h:form> 

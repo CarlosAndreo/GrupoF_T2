@@ -9,6 +9,8 @@ package jsf;
 import grupof.Usuario;
 import grupof.Usuario.Rol;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -40,17 +42,12 @@ public class Login {
     /**
      * Creates a new instance of Login
      */
-    public Login() {
-        usuarios = new ArrayList<Usuario>();
-      
-       
-       usuarios.add(new Usuario("paco@mail.com","pass",Rol.ALUMNO));
-       usuarios.add(new Usuario("roberto@uma.es","bd",Rol.ALUMNO));
-       usuarios.add(new Usuario("ad@hotmail.es","ad",Rol.PDI));
-       usuarios.add(new Usuario("bd@mail.com","bd",Rol.GESTOR));
-       usuarios.add(new Usuario("pas@mail.com","pas",Rol.PAS));
-       usuarios.add(new Usuario("ong@correo.com","ong",Rol.ORGANIZACION));
-       usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", new Date(116,5,3), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
+    public Login() throws ParseException {
+       usuarios = new ArrayList<Usuario>();
+       SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
+       usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", dateformat3.parse("05/03/2020"), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
+       usuarios.add(new Usuario(new Long(2), "pp", "duro", "bd", dateformat3.parse("05/03/2020"), "12456478W", "pp@uma.es", "paseo de los moros", "si", "Foto", 12345679, "Espaniol", Rol.PDI)); 
+       usuarios.add(new Usuario(new Long(3), "prof", "sss", "bd", dateformat3.parse("05/03/2020"), "12456478W", "prof@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.PAS));
     }
     
     public List<Usuario> getUsuarios(){

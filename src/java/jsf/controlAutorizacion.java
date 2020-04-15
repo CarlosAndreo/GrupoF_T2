@@ -86,6 +86,10 @@ public class controlAutorizacion implements Serializable {
             return "inicio.xhtml";
         }
         
+        if(getUsuario().getRol().equals(getUsuario().getRol().PAS)){
+            return "inicio.xhtml";
+        }
+        
         return null;
     }
     

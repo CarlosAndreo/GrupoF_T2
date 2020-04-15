@@ -25,6 +25,10 @@ public class Usuario implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private void setUserId(Long UserID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     public enum Rol{
         PDI,PAS,ALUMNO,GESTOR, ORGANIZACION
@@ -72,20 +76,21 @@ public class Usuario implements Serializable {
         setRol(tipo);
     }
 
-    public Usuario(Long UserID, String Nombre, String Apellidos, String Password, Date FechaNacimiento, String DNI, String email, String direccion, String formacion, String foto, Integer telefono, String idioma, Rol Rol) {
-        this.UserID = UserID;
-        this.Nombre = Nombre;
-        this.Apellidos = Apellidos;
-        this.Password = Password;
-        this.FechaNacimiento = FechaNacimiento;
-        this.DNI = DNI;
-        this.email = email;
-        this.direccion = direccion;
-        this.formacion = formacion;
-        this.foto = foto;
-        this.telefono = telefono;
-        this.idioma = idioma;
-        this.Rol = Rol;
+    public Usuario(Long UserID, String Nombre, String Apellidos, String Password, Date FechaNacimiento, String DNI, String email, String direccion, String formacion, String foto, Integer telefono, String idioma, Rol Rol) {       
+        setUserID(UserID);
+        setNombre(Nombre);
+        setApellidos(Apellidos);
+        setPassword(Password);
+        setFechaNacimiento(FechaNacimiento);
+        setDNI(DNI);
+        setEmail(email);
+        setDireccion(direccion);
+        setFormacion(formacion);
+        setFoto(foto);
+        setTelefono(telefono);
+        setIdioma(idioma);
+         setRol(Rol);
+
     }
     
     public Long getUserID() {

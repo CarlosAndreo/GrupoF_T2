@@ -33,8 +33,7 @@ public class gestionarPerfilUsuario implements Serializable{
     
     public gestionarPerfilUsuario() throws ParseException {
         usuarios = new ArrayList<>();
-        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
-        usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", dateformat3.parse("01/01/111"), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO));
+        
         //Usuario u1 = new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", dateformat3.parse("01/01/111"), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO);
     }
 
