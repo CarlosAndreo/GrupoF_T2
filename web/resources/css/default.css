@@ -13,12 +13,12 @@ body{
     
 }
 .form-box{
-   width: 400px;
-   height: 400px;
-   background: #0099e0;
-   text-align: center;
-   align-items: center;
-   border-radius: 20px;
+width: 400px;
+height: 400px;
+background: #f3d706;
+text-align: center;
+align-items: center;
+border-radius: 20px;
 }
 .logoUMA{
     margin-top:  100px;
@@ -120,15 +120,13 @@ body{
     background-color: white;
 }
 h2{
-    margin: 60px;
-    padding: 0px;
-    font-size: 50px;
-    font-weight: bold;
-    color: red;
-    border-bottom: 1px solid #AFAFAF; 
-    
-   
-    
+margin: 60px;
+padding: 0px;
+font-size: 50px;
+font-weight: bold;
+font-family: arial;
+color: black;
+border-bottom: 1px solid #AFAFAF;
 }
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;

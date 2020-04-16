@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -84,6 +85,11 @@ private Actividad a = new Actividad();
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
        actividad = new Actividad(new Long(actividades.size()+1),nombre,fechaInicio,FechaFin,local,desc,capNec,tipo,estado);
        actividades.add(actividad);
+       return "CRUDActividades.xhtml";
+    }
+    
+    public String create(Actividad a) throws ParseException{
+       actividades.add(a);
        return "CRUDActividades.xhtml";
     }
  

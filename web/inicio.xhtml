@@ -45,6 +45,11 @@
                 <h2 align="center">MODO PAS</h2>
                 <img id="scl" src="./resources/img/logoApS.png"></img>
             </c:when>
+            <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
+                <h1>Página de inicio.</h1>
+                <h2 align="center">MODO ORGANIZACION</h2>
+                <img id="scl" src="./resources/img/logoApS.png"></img>
+            </c:when>
            
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
