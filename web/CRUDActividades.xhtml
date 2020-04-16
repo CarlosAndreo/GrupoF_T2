@@ -4,8 +4,8 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
-    
-    <ui:define name="title">Lista de Actividades</ui:define>
+     <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
+    <ui:define name="title">Actividades</ui:define>
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">

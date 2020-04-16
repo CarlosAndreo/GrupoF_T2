@@ -3,7 +3,9 @@
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
-    <ui:define name="title">Página para el usuario normal</ui:define>
+    
+     <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
+    <ui:define name="title">Inicio</ui:define>
     <ui:define name="content">
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ALUMNO'}">
