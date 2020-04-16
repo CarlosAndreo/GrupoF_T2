@@ -34,6 +34,10 @@ public class ParticipacionEnActividad implements Serializable {
     private Integer HorasDedicadas;
     private String Observaciones;
     private String Estado;
+
+    public ParticipacionEnActividad(Long aLong, Date parse, int i, String perfe, int i0, String todo_perfe, String evaluado) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     public Date getFecha() {

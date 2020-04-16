@@ -19,7 +19,7 @@ public class controlAutorizacion implements Serializable {
     private Usuario usuario;
     
     private Organizacion org;
-    //private Socios[] socios;
+    
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -41,10 +41,7 @@ public class controlAutorizacion implements Serializable {
         this.org = org;
     }
     
-   /* public Socios[] getSocios() {
-        return socios;
-    }
-    */
+  
     public String CRUDActividades(){
         return "CRUDActividades.xhtml";
     }
@@ -65,8 +62,8 @@ public class controlAutorizacion implements Serializable {
         return "miPerfilUsuario.xhtml";
     }
     
-    public String perfilOrganizacion(){
-        return "perfilOrganizacion.xhtml";
+    public String EvaluarUser(){
+        return "evaluaciones";
     }
     
     public String porRealizar(){

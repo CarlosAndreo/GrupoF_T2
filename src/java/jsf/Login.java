@@ -38,7 +38,8 @@ public class Login {
     private String contrasenia;
     private List<Usuario> usuarios;
     private Organizacion org;
-    @Inject
+    
+   @Inject
     private controlAutorizacion ctrl;
 
     /**
@@ -46,14 +47,15 @@ public class Login {
      */
     public Login() throws ParseException {
        usuarios = new ArrayList<Usuario>();
+      
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");  
        usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", dateformat3.parse("05/03/2020"), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
        usuarios.add(new Usuario(new Long(2), "pp", "duro", "bd", dateformat3.parse("05/03/2020"), "12456478W", "pp@uma.es", "paseo de los moros", "si", "Foto", 12345679, "Espaniol", Rol.PDI)); 
        usuarios.add(new Usuario(new Long(3), "prof", "sss", "bd", dateformat3.parse("05/03/2020"), "12456478W", "prof@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.PAS));
        usuarios.add(new Usuario(new Long(4),"admin@mail.com","admin",Rol.GESTOR));
-       usuarios.add(new Usuario(new Long(5), "org", "sss", "org", dateformat3.parse("05/03/2020"), "12456478W", "org@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.ORGANIZACION));
-       org = new Organizacion(new Long(6), "Bebesita", "Madrid", "Salvar vidas contra Coronavirus");
-       usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
+       org =  new Organizacion(new Long(6), "Bebesita", "Madrid", "Salvar vidas contra Coronavirus");
+ 
+        usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }
     
     public List<Usuario> getUsuarios(){
@@ -79,22 +81,36 @@ public class Login {
         this.contrasenia = contrasenia;
     }
 
+    public Organizacion getOrg() {
+        return org;
+    }
+
+    public void setOrg(Organizacion org) {
+        this.org = org;
+    }
+    
+
     public String autenticar() {
         // Implementar este método
         FacesContext ctx = FacesContext.getCurrentInstance();
         Iterator<Usuario> iter = usuarios.iterator();
         boolean pass = false;
         boolean user = false;
+      
         Usuario usuario = null;
+      
         
         while(iter.hasNext() && !user){
             usuario = iter.next();
             
             if(usuario.getEmail().equals(getEmail())){
                 user = true;
+                
                 if(usuario.getPassword().equals(getContrasenia())){
                     pass = true;
                     ctrl.setUsuario(usuario);
+                    ctrl.setOrg(org);
+                  
                     return ctrl.home();
                 }
             }

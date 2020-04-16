@@ -125,7 +125,47 @@
                 </h:form>
                
             </c:when>
-                   
+                      
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
+                  <h1>PERFIL DE ORGANIZACION</h1>
+                
+                <h:form id="controlAutorizacion">
+                    <table>
+              
+                        <tr>
+                            <td>Código de proyecto: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.org.codProyecto}"/></td>
+                        </tr>
+                      
+                      
+                        <tr>
+                            <td>Nombre: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.org.nombre}"/></td>
+                        </tr>
+                        
+                      
+                        <tr>
+                            <td>Sede: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.org.sede}"/></td>
+                        </tr>
+                        
+                          <tr>
+                            <td>Propósito: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.org.proposito}"/></td>
+                        </tr>
+                        
+                    </table>
+                </h:form>
+                <h:form> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column>                         
+                </h:form>
+               
+            </c:when>
+            
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>

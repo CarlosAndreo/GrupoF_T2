@@ -8,6 +8,44 @@
     <ui:define name="title">Mi perfil</ui:define>
     <ui:define name="content">
         <c:choose>
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
+                <h1>PERFIL DE ORGANIZACION</h1>
+                <h:form id="PerfilOrganizacion">
+                    <table>                       
+                        <tr>
+                            <td>Código de proyecto: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.org.codProyecto}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Nombre: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.org.nombre}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Sede: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.org.sede}"/></td>
+                        </tr>
+                        
+                         <tr>
+                            <td>Proposito: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.org.proposito}"/></td>
+                        </tr>      
+                        
+                    </table>
+                </h:form>
+                <h:form> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Guardar cambios"/> </h:column> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Cancelar" action="miPerfilUsuario.xhtml" /> </h:column>                         
+                </h:form>
+                 
+            </c:when>
+            
+           
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' }">
                 <h1>PERFIL DE #{controlAutorizacion.usuario.nombre.toUpperCase()} #{controlAutorizacion.usuario.apellidos.toUpperCase()}</h1>
                 
@@ -128,6 +166,7 @@
                 </h:form>
                    
             </c:when>
+          
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>
