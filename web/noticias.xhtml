@@ -33,13 +33,13 @@
                                     <td>#{i.descripcion}</td>
                                     <td>#{i.fecha}</td>
                                     <td>
-                                        <h:form> <h:column> <h:commandButton value ="Ver"  action="#{ListaNoticias.verNoticia()}"/></h:column></h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2"   value ="Ver"  action="#{ListaNoticias.verNoticia()}"/></h:column></h:form>
                                     </td>
                                     <td>                                     
-                                        <h:form> <h:column> <h:commandButton value="Modificar"  action="#{ListaNoticias.modificarNoticia()}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Modificar"  action="#{ListaNoticias.modificarNoticia()}"/> </h:column> </h:form>
                                     </td>
                                     <td>          
-                                        <h:form> <h:column> <h:commandButton value="Borrar"  action="#{ListaNoticias.borrarNoticia(i.codNoticia)}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Borrar"  action="#{ListaNoticias.borrarNoticia(i.codNoticia)}"/> </h:column> </h:form>
                                     </td>
                                      
                                 </tr>
@@ -61,7 +61,7 @@
                         <td>
                             <h:form> 
                                 <h:column> 
-                                    <h:commandButton value ="Crear nueva noticia" action="#{ListaNoticias.createNoticia()}"/>
+                                    <h:commandButton value ="Crear nueva noticia" styleClass="email2"  action="#{ListaNoticias.createNoticia()}"/>
                                 </h:column>
                             
                             </h:form>
@@ -101,7 +101,7 @@
                                     <td>#{i.descripcion}</td>
                                     <td>#{i.fecha}</td>        
                                     <td> 
-                                        <h:form> <h:column> <h:commandButton value="Ver" action="#{ListaNoticias.verNoticia()}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Ver" action="#{ListaNoticias.verNoticia()}"/> </h:column> </h:form>
                                     </td>                                    
                                 </tr>
                             </ui:repeat>
