@@ -10,6 +10,7 @@ import grupof.Usuario;
 import grupof.Usuario.Rol;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import grupof.Gestor;
+import grupof.Organizacion;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class Login {
     private String email;
     private String contrasenia;
     private List<Usuario> usuarios;
-    
+    private Organizacion org;
     @Inject
     private controlAutorizacion ctrl;
 
@@ -51,6 +52,8 @@ public class Login {
        usuarios.add(new Usuario(new Long(3), "prof", "sss", "bd", dateformat3.parse("05/03/2020"), "12456478W", "prof@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.PAS));
        usuarios.add(new Usuario(new Long(4),"admin@mail.com","admin",Rol.GESTOR));
        usuarios.add(new Usuario(new Long(5), "org", "sss", "org", dateformat3.parse("05/03/2020"), "12456478W", "org@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.ORGANIZACION));
+       org = new Organizacion(new Long(6), "Bebesita", "Madrid", "Salvar vidas contra Coronavirus");
+       usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }
     
     public List<Usuario> getUsuarios(){

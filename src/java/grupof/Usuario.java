@@ -63,6 +63,7 @@ public class Usuario implements Serializable {
     private List<ValoracionPrivada> valoraciones;
     @OneToMany
     private List<ValoracionPublica> valoracionesPublicas;
+    private Organizacion org;
     
     public Usuario(Long cod,String email,String pass,Rol rol){
         setUserID(cod);
@@ -99,6 +100,21 @@ public class Usuario implements Serializable {
 
     }
     
+    public Usuario(String email, String password, Rol rol, Organizacion ong){
+        setEmail(email);
+        setPassword(password);
+        setRol(rol);
+        setOrg(ong);
+    }
+
+    public Organizacion getOrg() {
+        return org;
+    }
+
+    public void setOrg(Organizacion org) {
+        this.org = org;
+    }
+
     public Long getUserID() {
         return UserID;
     }

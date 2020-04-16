@@ -38,10 +38,10 @@ public class Organizacion implements Serializable {
     }
     
     public Organizacion(Long CodProyecto, String nombre, String sede, String proposito){
-        this.CodProyecto = CodProyecto;
-        this.Nombre=nombre;
-        this.Sede = sede;
-        this.proposito = proposito;
+        setCodProyecto(CodProyecto);
+        setNombre(nombre);
+        setSede(sede);
+        setProposito(proposito);
     }
     public Long getCodProyecto() {
         return CodProyecto;
