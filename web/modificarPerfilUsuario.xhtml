@@ -47,6 +47,11 @@
 
                             <td><h:inputText  value="#{controlAutorizacion.usuario.email}"/></td>
                         </tr>
+                         <tr>
+                            <td>Contraseña: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.password}"/></td>
+                        </tr>
                         
                         <tr>
                             <td>Formacion: </td>
@@ -72,6 +77,44 @@
                             <td><h:inputText  value="#{controlAutorizacion.usuario.idioma}"/></td>
                         </tr>
                         
+                        <tr>
+                            <td>Rol: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
+                        </tr>
+                    </table>
+                </h:form>
+                <h:form> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Guardar cambios"/> </h:column> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Cancelar" action="miPerfilUsuario.xhtml" /> </h:column>                         
+                </h:form>
+                   
+            </c:when>
+             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+                  <h1>PERFIL DE GESTOR</h1>
+                
+                <h:form id="PerfilUsuario">
+                    <table>                       
+                        <tr>
+                            <td>Código de usuario: </td>
+
+                            <td><h:outputText  value="#{controlAutorizacion.usuario.userID}"/></td>
+                        </tr>
+                        
+                      
+                       
+                        <tr>
+                            <td>Email: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.email}"/></td>
+                        </tr>
+                         <tr>
+                            <td>Contraseña: </td>
+
+                            <td><h:inputText  value="#{controlAutorizacion.usuario.password}"/></td>
+                        </tr>
+                        
+                 
                         <tr>
                             <td>Rol: </td>
 

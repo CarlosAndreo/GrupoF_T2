@@ -17,6 +17,7 @@ import javax.faces.context.FacesContext;
 public class controlAutorizacion implements Serializable {
 
     private Usuario usuario;
+    
     private Organizacion ONG;
     //private Socios[] socios;
 

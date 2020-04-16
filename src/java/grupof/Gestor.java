@@ -31,6 +31,11 @@ public class Gestor implements Serializable {
     @OneToMany
     private List<Actividad> Actividades;
 
+    public Gestor(Long codGestor,String Usuario,String pass){
+        this.CodGestor=codGestor;
+        this.Usuario=Usuario;
+        this.Contrasenia=pass;
+    }
     public Long getCodGestor() {
         return CodGestor;
     }

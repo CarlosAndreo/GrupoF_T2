@@ -9,6 +9,7 @@ package jsf;
 import grupof.Usuario;
 import grupof.Usuario.Rol;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
+import grupof.Gestor;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,9 +46,14 @@ public class Login {
     public Login() throws ParseException {
        usuarios = new ArrayList<Usuario>();
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
+      
+       
        usuarios.add(new Usuario(new Long(1), "Alberto", "Aguilera", "alberto", dateformat3.parse("05/03/2020"), "12456478W", "alberto@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
        usuarios.add(new Usuario(new Long(2), "pp", "duro", "bd", dateformat3.parse("05/03/2020"), "12456478W", "pp@uma.es", "paseo de los moros", "si", "Foto", 12345679, "Espaniol", Rol.PDI)); 
        usuarios.add(new Usuario(new Long(3), "prof", "sss", "bd", dateformat3.parse("05/03/2020"), "12456478W", "prof@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.PAS));
+       usuarios.add(new Usuario(new Long(4),"admin@mail.com","admin",Rol.GESTOR));
+      
+       
     }
     
     public List<Usuario> getUsuarios(){

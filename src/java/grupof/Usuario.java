@@ -64,6 +64,12 @@ public class Usuario implements Serializable {
     @OneToMany
     private List<ValoracionPublica> valoracionesPublicas;
     
+    public Usuario(Long cod,String email,String pass,Rol rol){
+        setUserID(cod);
+        setEmail(email);
+        setPassword(pass);
+        setRol(rol);
+    }
     
     public Usuario( String nombre, String apellidos){
      
