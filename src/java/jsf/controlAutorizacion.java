@@ -33,6 +33,7 @@ public class controlAutorizacion implements Serializable {
         return usuario;
     }
 
+   
    /* public Organizacion getONG() {
         return ONG;
     }

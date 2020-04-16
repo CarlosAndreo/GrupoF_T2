@@ -44,6 +44,7 @@
                         
                         <!-- ¿Qué le ponemos, las actividades a la que está inscrito?-->
                         <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="INSCRIPCIONES"/></li>
+                      
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.perfilUsuario()}" value="MI PERFIL"/></li>
 
@@ -53,6 +54,7 @@
                     <c:if test="#{controlAutorizacion.usuario.rol == 'PDI'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.Noticias()}" value="NOTICIAS"/></li>
+                         
                         
                         <!-- ¿Qué le ponemos en solicitudes al pdi/pas, lo mismo que al gestor? -->
                          <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="EVALUAR USUARIO"/></li>
@@ -67,6 +69,7 @@
                     <c:if test="#{controlAutorizacion.usuario.rol == 'PAS'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.Noticias()}" value="NOTICIAS"/></li>
+                      
                         
                         <!-- ¿Qué le ponemos en solicitudes al pdi/pas, lo mismo que al gestor? -->
                         <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="SOLICITUDES"/></li>
@@ -82,12 +85,14 @@
                         <li><h:commandLink action="#{controlAutorizacion.Noticias()}" value="NOTICIAS"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ParticipacionActividad()}" value="SOLICITUDES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="INSCRIPCIONES"/></li>
+                       
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.perfilUsuario()}" value="MI PERFIL"/></li>
                     </c:if>
                     <c:if test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.propuestas()}" value="PROPUESTAS"/></li>
+                         
                         <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="INSCRIPCIONES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.perfilUsuario()}" value="MI PERFIL"/></li>

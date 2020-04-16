@@ -25,6 +25,9 @@ public class Mensaje implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long IDMensaje;
     private String Texto;
+    private String Asunto;
+    
+    
     @OneToMany
     private List<Usuario> Usuarios;
 
