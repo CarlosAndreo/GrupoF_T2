@@ -34,7 +34,14 @@ public class Organizacion implements Serializable {
     private List<ValoracionPrivada> valoraciones;
     
     public Organizacion(String nombre){
+        this.Nombre = nombre;
+    }
+    
+    public Organizacion(Long CodProyecto, String nombre, String sede, String proposito){
+        this.CodProyecto = CodProyecto;
         this.Nombre=nombre;
+        this.Sede = sede;
+        this.proposito = proposito;
     }
     public Long getCodProyecto() {
         return CodProyecto;

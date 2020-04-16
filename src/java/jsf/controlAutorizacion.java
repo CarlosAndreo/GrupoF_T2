@@ -18,7 +18,7 @@ public class controlAutorizacion implements Serializable {
 
     private Usuario usuario;
     
-    private Organizacion ONG;
+    private Organizacion org;
     //private Socios[] socios;
 
     public void setUsuario(Usuario usuario) {
@@ -32,16 +32,15 @@ public class controlAutorizacion implements Serializable {
     public Usuario getUsuario() {
         return usuario;
     }
-
    
-   /* public Organizacion getONG() {
-        return ONG;
+    public Organizacion getOrg() {
+        return org;
     }
 
-    public void setONG(Organizacion ONG) {
-        this.ONG = ONG;
+    public void setOrg(Organizacion org) {
+        this.org = org;
     }
-    */
+    
    /* public Socios[] getSocios() {
         return socios;
     }
@@ -64,6 +63,10 @@ public class controlAutorizacion implements Serializable {
     
     public String perfilUsuario(){
         return "miPerfilUsuario.xhtml";
+    }
+    
+    public String perfilOrganizacion(){
+        return "perfilOrganizacion.xhtml";
     }
     
     public String porRealizar(){
@@ -92,6 +95,9 @@ public class controlAutorizacion implements Serializable {
             return "inicio.xhtml";
         }
         
+        if(getUsuario().getRol().equals(getUsuario().getRol().ORGANIZACION)){
+            return "inicio.xhtml";
+        }
         return null;
     }
     

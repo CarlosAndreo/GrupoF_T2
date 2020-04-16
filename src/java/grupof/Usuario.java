@@ -95,7 +95,7 @@ public class Usuario implements Serializable {
         setFoto(foto);
         setTelefono(telefono);
         setIdioma(idioma);
-         setRol(Rol);
+        setRol(Rol);
 
     }
     
