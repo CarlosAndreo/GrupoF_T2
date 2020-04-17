@@ -6,10 +6,13 @@
                 xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
  <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico" />
+ 
+                    
     <ui:define name="title">Login</ui:define>
     <ui:define name="content">
         <c:choose>
             <c:when test="#{empty controlAutorizacion.usuario}">
+                
                 <center>
                 
                 <h:form class="form-box">

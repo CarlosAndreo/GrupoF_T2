@@ -91,7 +91,7 @@
                     </c:if>
                     <c:if test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
                         <li><h:commandLink action="#{controlAutorizacion.CRUDActividades()}" value="ACTIVIDADES"/></li>
-                        <li><h:commandLink action="#{controlAutorizacion.propuestas()}" value="PROPUESTAS"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="PROPUESTAS"/></li>
                          
                         <li><h:commandLink action="#{controlAutorizacion.porRealizar()}" value="INSCRIPCIONES"/></li>
                         <li><h:commandLink action="#{controlAutorizacion.ApS}" value="APS"/></li>

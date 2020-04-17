@@ -14,21 +14,21 @@
                 <h:form id="redactar" >
                     <h:panelGrid columns="3" >
                         <h:outputText value="Destinatario"/>
-                        <h:inputText id ="destinatario" value="#{ListaActividades.a.nombreActividad}" />
+                        <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
                         <h:message for="destinatario"/>
                         
                         <h:outputText value="Asunto"/>
-                        <h:inputText id ="asunto" value="#{ListaActividades.a.fechaInicio}"/>
+                        <h:inputText id ="asunto" value="#{ListaMensajes.m1.asunto}"/>
                         <h:message for="asunto"/>
                         
                         <h:outputText value="Mensaje"/>
-                        <h:inputText id ="mensaje" value="#{ListaActividades.a.fechaFin}" />
+                        <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
                         <h:message for="mensaje"/>
                         
                     </h:panelGrid>
                 </h:form>
                 <h:form> 
-                    <h:commandButton value="Enviar mensaje" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
+                    <h:commandButton value="Enviar mensaje" styleClass="email2"  action="CreateMensajes.xhtml" /> 
                   
                     <h:commandButton value="Cancelar" styleClass="email2"  action="miPerfilUsuario.xhtml" /> 
                 </h:form>

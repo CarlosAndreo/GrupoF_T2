@@ -26,6 +26,8 @@ public class Mensaje implements Serializable {
     private Long IDMensaje;
     private String Texto;
     private String Asunto;
+    private String emisor;
+    private String receptor;
     
     
     @OneToMany
@@ -47,6 +49,45 @@ public class Mensaje implements Serializable {
         this.Texto = Texto;
     }
 
+    public String getAsunto() {
+        return Asunto;
+    }
+
+    public void setAsunto(String Asunto) {
+        this.Asunto = Asunto;
+    }
+
+    public String getEmisor() {
+        return emisor;
+    }
+
+    public void setEmisor(String emisor) {
+        this.emisor = emisor;
+    }
+
+    public String getReceptor() {
+        return receptor;
+    }
+
+    public void setReceptor(String receptor) {
+        this.receptor = receptor;
+    }
+    
+    public Mensaje(String r,String a,String txt){
+         setReceptor(r);
+    setAsunto(a);
+    setTexto(txt);
+    }
+public Mensaje(Long id,String e,String r,String a,String txt){
+    setIDMensaje(id);
+    setEmisor(e);
+    setReceptor(r);
+    setAsunto(a);
+    setTexto(txt);
+}
+public Mensaje(){
+    
+}
     @Override
     public int hashCode() {
         int hash = 0;
