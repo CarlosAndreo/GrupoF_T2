@@ -116,6 +116,7 @@ ul.menulist li {
   width: 50%;
 }
 
+
 #tablaListaActividades{
     width: fit-content;
     text-align: center;
@@ -132,6 +133,8 @@ th,td{
     border-spacing: 0;
     border: 1px solid black;
 }
+
+
 .bordeTablaActividades th{
     border: 1px solid black;
 }

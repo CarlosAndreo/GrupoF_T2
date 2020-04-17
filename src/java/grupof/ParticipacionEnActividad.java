@@ -35,6 +35,7 @@ public class ParticipacionEnActividad implements Serializable {
     private String Observaciones;
     private String Estado;
 
+
     public ParticipacionEnActividad(Long IDParticipacion, Date Fecha, Integer Nota, String ComentariosNota, Integer HorasDedicadas, String Observaciones, String Estado) {
         this.IDParticipacion = IDParticipacion;
         this.Fecha = Fecha;
@@ -44,7 +45,6 @@ public class ParticipacionEnActividad implements Serializable {
         this.Observaciones = Observaciones;
         this.Estado = Estado;
     }
-    
 
     public Date getFecha() {
         return Fecha;

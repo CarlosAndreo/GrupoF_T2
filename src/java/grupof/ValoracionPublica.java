@@ -25,6 +25,7 @@ public class ValoracionPublica implements Serializable {
     private Long IDValoracion;
     private Integer Calificacion;
     private String ComentariosUsuario;
+
     private Long ID = new Long(1);
     
     public ValoracionPublica() {
@@ -41,7 +42,7 @@ public class ValoracionPublica implements Serializable {
         this.ComentariosUsuario = ComentariosUsuario;
     }
     
-    
+  
 
     public Long getIDValoracion() {
         return IDValoracion;

@@ -63,7 +63,9 @@ public class controlAutorizacion implements Serializable {
     }
     
     public String EvaluarUser(){
+
         return "evaluaciones.xhtml";
+
     }
     
     public String porRealizar(){
