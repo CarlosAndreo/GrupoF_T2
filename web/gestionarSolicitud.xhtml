@@ -9,7 +9,7 @@
     <ui:define name="content">
         <c:choose>
         
-                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI'}">
                     <h1 var = "i" value="#{ListaSolicitudes.actividades}">Gestionar solicitud</h1>
 
                         <h:form id="ListaActividades">
@@ -66,15 +66,12 @@
                      </h:form>
                      <h:form> 
                                           
-                         <h:commandButton value="Validar"   styleClass="email2"  action="participacionActividad.xhtml" style="margin: 5px"/> 
+                         <h:commandButton value="Validar"   styleClass="email2"  action="participacionActividad.xhtml" /> 
                          <h:commandButton value="Denegar"   styleClass="email2"  action="participacionActividad.xhtml"  /> 
+                           <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
                   
                      </h:form>
-                    <h:form> 
-                       <br/>     
-                        <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
-                        
-                     </h:form>
+                  
                     
                  
                 </c:when>

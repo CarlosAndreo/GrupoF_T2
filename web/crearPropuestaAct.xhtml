@@ -11,38 +11,35 @@
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
                 <h1>Crear nueva PROPUESTA</h1>
                 <h:form id="act" >
-                    <h:panelGrid columns="3" >
+                    <h:panelGrid columns="2" >
                         <h:outputText value="NombreActividad"/>
                         <h:inputText id ="nom" value="#{ListaActividades.a.nombreActividad}" />
-                        <h:message for="nombre"/>
-                        
+                       
                         <h:outputText value="FechaInicio"/>
                         <h:inputText id ="fI" value="#{ListaActividades.a.fechaInicio}"/>
-                        <h:message for="fechaInicio"/>
+                       
                         
                         <h:outputText value="FechaFin"/>
                         <h:inputText id ="fF" value="#{ListaActividades.a.fechaFin}" />
-                        <h:message for="fechaFin"/>
+                     
                         
                         <h:outputText value="Localizacion"/>
                         <h:inputText id ="loc" value="#{ListaActividades.a.localizacion}"/>
-                        <h:message for="localizacion"/>
+                      
                         
                          <h:outputText value="Descripcion"/>
                          <h:inputText id ="des" value="#{ListaActividades.a.descripcion}"/>
-                        <h:message for="descripcion"/>
-                        
+                                               
                         <h:outputText value="Capacidades necesarias"/>
                         <h:inputText id ="cap" value="#{ListaActividades.a.capacidadesNecesarias}" />
-                        <h:message for="capacidades necesarias"/>
+                      
                         
                         <h:outputText value="tipo actividad"/>
                         <h:inputText id ="tipo" value="#{ListaActividades.a.tipoActividad}"/>
-                        <h:message for="tipoActividad"/>
+                       
                         
                         <h:outputText value="estado actividad"/>
                         <h:inputText id ="estado" value="#{ListaActividades.a.estadoActividad}"/>
-                        <h:message for="estadoActividad"/>        
                        
                        
                         
@@ -50,7 +47,7 @@
                     </h:panelGrid>
                 </h:form>
                 <h:form> 
-                    <h:commandButton value="Actualizar Actividad" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
+                    <h:commandButton value="Enviar propuesta" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
                   
                     <h:commandButton value="Cancelar" styleClass="email2"  action="CRUDActividades.xhtml" /> 
                 </h:form>

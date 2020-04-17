@@ -23,8 +23,12 @@
                         </tr>
                     </table>
                     </h:form>
-                     <h:form>  <h:commandButton styleClass="email2" value ="Volver Atrás" action="CRUDActividades.xhtml"/></h:form>
-                     <h:form>  <h:commandButton styleClass="email2" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/></h:form>
+                <h:form>
+                     <h:commandButton styleClass="email2" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/>
+                     <h:commandButton styleClass="email2" value ="Volver Atrás" action="CRUDActividades.xhtml"/>
+                    
+                </h:form>
+                    
             </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>

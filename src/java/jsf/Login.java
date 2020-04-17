@@ -58,6 +58,15 @@ public class Login {
         usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }
     
+    public String borrarPerfil(int id){
+        
+       
+        usuarios.remove(id-1);
+        return "logout.xhtml";
+    }
+       
+    
+    
     public List<Usuario> getUsuarios(){
         
         return this.usuarios;

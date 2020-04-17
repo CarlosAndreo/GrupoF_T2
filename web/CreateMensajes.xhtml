@@ -12,7 +12,7 @@
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'GESTOR'   ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
                 <h1>Redactar nuevo mensaje</h1>
                 <h:form id="redactar" >
-<<<<<<< HEAD
+
                     <h:panelGrid columns="2" >
                         <h:outputText value="Destinatario"/>
                         <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
@@ -24,21 +24,7 @@
                         
                         <h:outputText value="Mensaje"/>
                         <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
-                      
-=======
-                    <h:panelGrid columns="3" >
-                        <h:outputText value="Destinatario"/>
-                        <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
-                        <h:message for="destinatario"/>
-                        
-                        <h:outputText value="Asunto"/>
-                        <h:inputText id ="asunto" value="#{ListaMensajes.m1.asunto}"/>
-                        <h:message for="asunto"/>
-                        
-                        <h:outputText value="Mensaje"/>
-                        <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
-                        <h:message for="mensaje"/>
->>>>>>> origin/master
+
                         
                     </h:panelGrid>
                 </h:form>

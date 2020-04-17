@@ -67,7 +67,9 @@ public class controlAutorizacion implements Serializable {
         return "evaluaciones.xhtml";
 
     }
-    
+    public String Propuesta(){
+        return "crearPropuestaAct.xhtml";
+    }
     public String porRealizar(){
         return "inicio.xhtml";
     }
