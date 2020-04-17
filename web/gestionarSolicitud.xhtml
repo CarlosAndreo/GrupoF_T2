@@ -1,0 +1,87 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                >
+     <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
+    <ui:define name="title">Gestionar solicitud</ui:define>
+    <ui:define name="content">
+        <c:choose>
+        
+                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+                    <h1 var = "i" value="#{ListaSolicitudes.actividades}">Gestionar solicitud</h1>
+
+                        <h:form id="ListaActividades">
+                         <table>
+                             
+                             <tr>
+                                 <td>Organización solicitante: </td>
+
+                                 <td><h:outputText  value="#{i.ong.nombre}"/></td>
+                             </tr>
+                             
+                             <td>Código de Actividad: #{i.codActividad}</td>
+                             
+                             <tr>
+                                 <td>Nombre Actividad: </td>
+
+                                 <td><h:outputText  value="#{i.nombreActividad}"/></td>
+                             </tr>
+                               <tr>
+     
+                            <td>Tipo de actividad: </td>
+                            <td><h:outputText  value="#{i.tipoActividad}"/></td>
+                        </tr>  
+                            
+                             <tr>
+                            <td>Localización: </td>
+                            <td><h:outputText  value="#{i.localizacion}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Descripción: </td>
+                            <td><h:outputText  value="#{i.descripcion}"/></td>
+                        </tr>      
+                     
+                        <tr>
+                            <td>Capacidades necesarias: </td>
+                            <td><h:outputText  value="#{i.capacidadesNecesarias}"/></td>
+                        </tr>  
+                        
+                         <tr>
+                                 <td>Fecha Inicio: </td>
+                                 <td><h:outputText  value="#{i.fechaInicio}"/></td>
+                             </tr>
+
+                             <tr>
+                                 <td>Fecha Fin: </td>
+                                 <td><h:outputText  value="#{i.fechaFin}"/></td>
+                             </tr>
+                             
+                       
+                            
+                       
+                         </table>
+                     </h:form>
+                     <h:form> 
+                                          
+                         <h:commandButton value="Validar"   styleClass="email2"  action="participacionActividad.xhtml" style="margin: 5px"/> 
+                         <h:commandButton value="Denegar"   styleClass="email2"  action="participacionActividad.xhtml"  /> 
+                  
+                     </h:form>
+                    <h:form> 
+                       <br/>     
+                        <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
+                        
+                     </h:form>
+                    
+                 
+                </c:when>
+       
+            <c:otherwise>
+                <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+</ui:composition>
