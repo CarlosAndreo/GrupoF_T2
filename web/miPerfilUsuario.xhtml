@@ -13,36 +13,29 @@
                   <h1>PERFIL DE GESTOR</h1>
                 
                 <h:form id="controlAutorizacion">
-                    <table>
+                     <table id="tablaListaActividades">
               
                         <tr>
                             <td>Código de usuario: </td>
-
                             <td><h:outputText  value="#{controlAutorizacion.usuario.userID}"/></td>
-                        </tr>
-                      
-                      
+                        </tr>     
                         <tr>
                             <td>Email: </td>
-
                             <td><h:outputText  value="#{controlAutorizacion.usuario.email}"/></td>
-                        </tr>
-                        
-                      
+                        </tr>                     
                         <tr>
                             <td>Rol: </td>
-
                             <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
-                        </tr>
-                        
+                        </tr>        
                     </table>
                 </h:form>
                 <h:form> 
-                    <h:column> <h:commandButton styleClass="email2"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column> 
-
-                    <h:column> <h:commandButton styleClass="email2"  value="Borrar perfil" action="#" /> </h:column> 
-                     <h:column> <h:commandButton styleClass="email2"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> </h:column>
-                     <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>    
+                <center>     
+                    <h:commandButton styleClass="email2"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" />
+                    <h:commandButton styleClass="email2"  value="Borrar perfil" action="#" /> 
+                    <h:commandButton styleClass="email2"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> 
+                    <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" />    
+                </center>
                 </h:form>
                
             </c:when>
@@ -53,8 +46,7 @@
               
                 
                 <h:form id="controlAutorizacion">
-                    <table>
-              
+                   <table id="tablaListaActividades">
                         <tr>
                             <td>Código de usuario: </td>
 
@@ -122,11 +114,14 @@
                         
                     </table>
                 </h:form>
-                <h:form> 
+              
+                <h:form>
+                    <center>
                     <h:column> <h:commandButton styleClass="email2"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column>
-                        <h:column> <h:commandButton styleClass="email2"  value="Borrar perfil" action="#" /> </h:column> 
+                    <h:column> <h:commandButton styleClass="email2"  value="Borrar perfil" action="#" /> </h:column> 
                     <h:column> <h:commandButton styleClass="email2"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> </h:column>
-                     <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>      
+                    <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>   
+                    </center>
                 </h:form>
                
             </c:when>
@@ -135,7 +130,7 @@
                   <h1>PERFIL DE ORGANIZACION</h1>
                 
                 <h:form id="controlAutorizacion">
-                    <table>
+                    <table id="tablaListaActividades">
               
                         <tr>
                             <td>Código de proyecto: </td>
@@ -166,11 +161,12 @@
                     </table>
                 </h:form>
                 <h:form> 
+                    <center>
                     <h:column> <h:commandButton styleClass="email2"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column>
                     <h:column> <h:commandButton styleClass="email2"  value="Borrar perfil" action="#" /> </h:column> 
-
-                     <h:column> <h:commandButton styleClass="email2"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> </h:column>
-                     <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>    
+                    <h:column> <h:commandButton styleClass="email2"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> </h:column>
+                    <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>  
+                    </center>
                 </h:form>
                
             </c:when>

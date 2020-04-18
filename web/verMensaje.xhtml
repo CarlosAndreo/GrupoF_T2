@@ -12,7 +12,7 @@
         
                 <h1 var = "i" value="#{ListaMensajes.mensajes}">Ver Mensaje</h1>              
                 <h:form id="ListaMensajes">
-                    <table>
+                    <table id="tablaListaActividades">
                         <tr>
                              <td>Emisor: </td>
                              <td><h:outputText value="#{i.emisor}"/></td>
@@ -34,8 +34,10 @@
                 </h:form>
                 <h:form> 
                   <br/>
+                  <center>
                     <h:column> <h:commandButton value="Responder"  styleClass="email2"  action="CreateMensajes.xhtml" /> </h:column> 
                     <h:column> <h:commandButton value="Volver Atrás"   styleClass="email2"  action="mensajesRecibidos.xhtml" /> </h:column> 
+                  </center>
                 </h:form>
                  
             </c:when>

@@ -1,7 +1,7 @@
 #top {
 position: relative;
-background-color: #f3d706;
-color: #f3d706;
+background-color: #EF7F1A;
+color: #EF7F1A;
 height: 7em;
 margin: 0px 0px 10px 0px;
 width: 100%;
@@ -13,11 +13,7 @@ margin-bottom: 25px;
 
 #menu {
     text-align: center;
-    
-    
 
-    
-  
 }
 
 #login {
@@ -34,7 +30,7 @@ margin-bottom: 25px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: yellowgreen;
+    background-color: #EF7F1A;
     color: black;
     height: 4em;
     text-align: center;
@@ -42,10 +38,10 @@ margin-bottom: 25px;
 }
 
 #bottom {
-position: relative;
-background-color: #f3d706;
-padding: 5px;
-margin: 10px 0px 0px 0px;
+    position: relative;
+    background-color: #f3d706;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
 }
 
 #left {
@@ -103,10 +99,7 @@ ul.menulist li {
     display:inline;
     padding-left: 10px;
     padding-right: 10px;
-    
-  
-    
-    
+
 }
 
 #scl{
@@ -123,12 +116,12 @@ ul.menulist li {
     padding-bottom: 100px;
     padding-left: 25px;
     padding-right: 25px;
-    margin: 0px;
+    margin: auto;
     background-color: white;
     border-spacing: 0;
+    align-items: center;
 }
 th,td{
-
     padding:5px;
     border-spacing: 0;
     border: 1px solid black;
@@ -137,8 +130,12 @@ th,td{
 
 .bordeTablaActividades th{
     border: 1px solid black;
+    margin: auto;
+    align-items: center;
 }
 
 .bordeTablaActividades td{
     border: 1px solid black;
+    margin: auto;
+    align-items: center;
 }

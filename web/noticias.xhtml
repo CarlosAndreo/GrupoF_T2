@@ -10,9 +10,6 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                 <h1>LISTA NOTICIAS</h1>  
-               
-                
-                
 
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
@@ -32,6 +29,7 @@
                                     <td>#{i.titulo}</td>
                                     <td>#{i.descripcion}</td>
                                     <td>#{i.fecha}</td>
+                                    <center>
                                     <td>
                                         <h:form> <h:column> <h:commandButton styleClass="email2"   value ="Ver"  action="#{ListaNoticias.verNoticia()}"/></h:column></h:form>
                                     </td>
@@ -41,7 +39,7 @@
                                     <td>          
                                         <h:form> <h:column> <h:commandButton styleClass="email2"  value="Borrar"  action="#{ListaNoticias.borrarNoticia(i.codNoticia)}"/> </h:column> </h:form>
                                     </td>
-                                     
+                                    </center>
                                 </tr>
                             </ui:repeat>
                             

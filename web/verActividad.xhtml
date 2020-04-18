@@ -12,7 +12,7 @@
         
                 <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>              
                 <h:form id="ListaActividades">
-                    <table>
+                    <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codActividad}</td>
                         <tr>
                             <td>Nombre Actividad: </td>
@@ -60,10 +60,12 @@
                 </h:form>
                 <h:form> 
                   <br/>
+                  <center>
                     <h:column> <h:commandButton value="Petición de inscripción"  styleClass="email2"  action="CRUDActividades.xhtml" /> </h:column> 
                     <h:column> <h:commandButton value="Volver Atrás"   styleClass="email2"  action="CRUDActividades.xhtml" /> </h:column> 
                     <h:column> <h:commandButton value="Valorar Actividad"   styleClass="email2"  action="valoracionesPublicas.xhtml" /> </h:column> 
                     <!-- Incluir un if para que solo se muestre este boton si ya se participa en la actv -->
+                  </center>
                 </h:form>
                  
             </c:when>
@@ -71,7 +73,7 @@
                         <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>
 
                         <h:form id="ListaActividades">
-                         <table>
+                         <table id="tablaListaActividades">
                              <td>Código de Actividad: #{i.codActividad}</td>
                              <tr>
                                  <td>Nombre Actividad: </td>
@@ -118,8 +120,10 @@
                          </table>
                      </h:form>
                      <h:form> 
-                       <br/>                     
+                       <br/>
+                       <center>
                          <h:commandButton value="Volver Atrás"  styleClass="email2"  action="CRUDActividades.xhtml" /> 
+                       </center>
                      </h:form>
                  
                 </c:when>

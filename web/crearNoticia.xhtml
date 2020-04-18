@@ -7,15 +7,13 @@
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
     <ui:define name="title">Crear nueva noticia</ui:define>
     <ui:define name="content">
-        <c:choose>
-           
-          
+        <c:choose>         
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                     <h1>Crear una nueva noticia</h1>
                    
                     <h:form>
                         
-                        <table border="0">
+                        <table id="tablaListaActividades">
                             <tr>
                                 <td> <h:outputLabel value="Titulo:"/></td>
                                 <td><h:inputText value="#{ListaNoticias.noticia.titulo}"></h:inputText></td>
@@ -36,12 +34,13 @@
                         
                        
                     </h:form>
-                     <h:form>
-                            
+                    <h:form>
+                        <center>  
                          <h:column> <h:commandButton value="Crear noticia" styleClass="email2"  action="noticias.xhtml" />  </h:column>
                                        
-                         <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
-                        </h:form>
+                         <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column>
+                        </center>
+                    </h:form>
                        
                  
                 </c:when>

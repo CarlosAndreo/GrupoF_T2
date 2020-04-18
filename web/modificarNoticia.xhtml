@@ -13,7 +13,7 @@
                 <h1 var = "i" value="#{ListaNoticias.noticias}">Modificar Noticia</h1>
                 
                 <h:form id="ListaNoticias">
-                    <table>
+                    <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codNoticia}</td>
                         <tr>
                             <td>Nombre Actividad: </td>
@@ -33,8 +33,10 @@
                 </h:form>
                 <h:form> 
                  <!-- Falta el botón de modificar variables -->
+                 <center>
                   <h:column> <h:commandButton value="Actualizar Noticia" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
-                    <h:column> <h:commandButton value="Cancelar"  styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                  <h:column> <h:commandButton value="Cancelar"  styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                 </center>
                 </h:form>
                 
             </c:when>

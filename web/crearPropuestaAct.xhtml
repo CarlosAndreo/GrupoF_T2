@@ -10,7 +10,8 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
                 <h1>Crear nueva PROPUESTA</h1>
-                <h:form id="act" >
+                
+                <h:form id="tablaListaActividades" >
                     <h:panelGrid columns="2" >
                         <h:outputText value="NombreActividad"/>
                         <h:inputText id ="nom" value="#{ListaActividades.a.nombreActividad}" />
@@ -47,12 +48,13 @@
                     </h:panelGrid>
                 </h:form>
                 <h:form> 
+                    <center>    
                     <h:commandButton value="Enviar solicitud" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
                   
                     <h:commandButton value="Solicitudes denegadas" styleClass="email2"  action="solicitudesDenegadas.xhtml" /> 
                     
                     <h:commandButton value="Cancelar" styleClass="email2"  action="inicio.xhtml" /> 
-                    
+                    </center> 
                 </h:form>
             </c:when>
            

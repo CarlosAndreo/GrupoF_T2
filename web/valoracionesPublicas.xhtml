@@ -12,7 +12,7 @@
                 <h1>Valoraciones Públicas</h1>
                 <h1 var = "i" value="#{ValoracionesPublicas.v}"></h1>              
                 <h:form id="Valoracion">
-                    <table>
+                    <table id="tablaListaActividades">
                         <tr>
                            <td>Calificacion</td>
                            <td><h:inputText  value="#{i.calificacion}"/></td>
@@ -24,9 +24,10 @@
                     </table>
                     </h:form>
                 <h:form>
+                    <center>
                      <h:commandButton styleClass="email2" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/>
                      <h:commandButton styleClass="email2" value ="Volver Atrás" action="CRUDActividades.xhtml"/>
-                    
+                    </center>
                 </h:form>
                     
             </c:when>

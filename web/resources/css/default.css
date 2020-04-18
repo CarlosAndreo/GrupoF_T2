@@ -13,12 +13,12 @@ body{
     
 }
 .form-box{
-width: 400px;
-height: 400px;
-background: #f3d706;
-text-align: center;
-align-items: center;
-border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    background: #EF7F1A;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
 }
 .logoUMA{
     margin-top:  100px;
@@ -26,69 +26,61 @@ border-radius: 20px;
    
 }
 
-
-.email{
-    
+.email{  
     margin: 20px;
     border-radius: 10px;
     background-color: white;
-   
     
 }
-
-
-
 
 .email2{
     margin: 20px;
     border-radius: 10px;
     background-color: white;
-   
-    
+    text-align: center;
 }
 
 .btnCancelar{
-    
 
     margin: 20px;
     border-radius: 10px;
     background-color: red;
     color:black;
-   
-   
-    
+  
 }
+
 .btnAceptar{
-     margin: 20px;
+    margin: 20px;
     border-radius: 10px;
     background-color: greenyellow;
     color: black;
    
 }
 .btnOtro{
-     margin: 20px;
+    margin: 20px;
     border-radius: 10px;
     background-color: aquamarine;
     color:black;
    
 }
 .boton{
-     margin: 20px;
+    margin: 20px;
     border-radius: 10px;
     background-color: white;
 }
 h2{
-margin: 60px;
-padding: 0px;
-font-size: 50px;
-font-weight: bold;
-font-family: arial;
-color: black;
-border-bottom: 1px solid #AFAFAF;
+    margin: 60px;
+    padding: 0px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: arial;
+    color: black;
+    border-bottom: 1px solid #AFAFAF;
 }
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     border-bottom: 1px solid #AFAFAF; 
+    text-align: center;
     font-size:  25px;
     font-weight: bold;
     margin: 10px;
@@ -96,22 +88,20 @@ h1 {
     color: #D20005;
 }
 
-.letraApS{
-    
+.letraApS{   
     letter-spacing: 1px;
     line-height: 1.5;
     text-align: center;
-    
-    
+
 }
 a:link, a:visited {
-  color: #045491;
-  font-weight : bold;
-  text-decoration: none;
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
 }
 
 a:link:hover, a:visited:hover  {
-  color: #045491;
-  font-weight : bold;
-  text-decoration : underline;
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
 }

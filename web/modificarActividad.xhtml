@@ -13,7 +13,7 @@
                 <h1 var = "i" value="#{ListaActividades.actividades}">Modificar Actividad</h1>
                 
                 <h:form id="ListaActividades">
-                    <table>
+                    <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codActividad}</td>
                         
                         
@@ -69,10 +69,11 @@
                     
                     </table>
                 </h:form>
-                <h:form> 
+                <h:form>
+                    <center>
                     <h:commandButton value="Actualizar Solicitud" styleClass="email2"  action="#" /> 
-                  
-                <h:commandButton value="Volver atrás" styleClass="email2"  action="solicitudesDenegadas.xhtml" /> 
+                    <h:commandButton value="Volver atrás" styleClass="email2"  action="solicitudesDenegadas.xhtml" /> 
+                    </center>
                 </h:form>
                 
             </c:when>

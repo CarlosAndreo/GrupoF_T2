@@ -12,7 +12,7 @@
                 <h1>EVALUACIONES</h1>
         
                 <div class="bordeTablaActividades">
-                    <table id="tablaEvaluaciones">
+                    <table id="tablaListaActividades">
                         <thead>
                                 <tr>
                                         <th>Id Participacion</th>
@@ -36,10 +36,10 @@
                                     <td>#{i.observaciones}</td>
                                     <td>#{i.estado}</td>
                                     <td>
-
+                                        <center>
                                         <h:form> <h:column> <h:commandButton styleClass="email2" value ="Evaluar" action="evaluacion.xhtml"/></h:column></h:form>
-                                   
-
+                                        </center>
+                                        
                                     </td>             
                                 </tr>
                             </ui:repeat>

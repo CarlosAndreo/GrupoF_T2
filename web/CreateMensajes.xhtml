@@ -11,9 +11,8 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'GESTOR'   ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
                 <h1>Redactar nuevo mensaje</h1>
-                <h:form id="redactar" >
-
-                    <h:panelGrid columns="2" >
+                
+                    <h:panelGrid columns="2" style="margin: 0 auto;" >
                         <h:outputText value="Destinatario"/>
                         <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
                        
@@ -24,14 +23,14 @@
                         
                         <h:outputText value="Mensaje"/>
                         <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
-
                         
-                    </h:panelGrid>
-                </h:form>
-                <h:form> 
+                    </h:panelGrid>             
+                <h:form>
+                    <center>
                     <h:commandButton value="Enviar mensaje" styleClass="email2"  action="CreateMensajes.xhtml" /> 
                   
                     <h:commandButton value="Cancelar" styleClass="email2"  action="miPerfilUsuario.xhtml" /> 
+                    </center>
                 </h:form>
             </c:when>
            

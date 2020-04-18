@@ -12,7 +12,7 @@
         
                 <h1 var = "i" value="#{ListaNoticias.noticias}">Ver Noticia</h1>              
                 <h:form id="ListaNoticias">
-                    <table>                     
+                    <table id="tablaListaActividades">                 
                         <tr>
                             <td>Nombre noticia: </td>
 
@@ -29,8 +29,10 @@
                     </table>
                 </h:form>
                 <h:form> 
-                  <br/>               
+                  <br/>
+                  <center>
                     <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                  </center>
                 </h:form>
                  
             </c:when>
@@ -55,8 +57,10 @@
                          </table>
                         </h:form>
                      <h:form> 
-                       <br/>                     
+                       <br/>
+                       <center>
                          <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                       </center>
                      </h:form>
                  
                 </c:when>

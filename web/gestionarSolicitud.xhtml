@@ -13,7 +13,7 @@
                     <h1 var = "i" value="#{ListaSolicitudes.actividades}">Gestionar solicitud</h1>
 
                         <h:form id="ListaActividades">
-                         <table>
+                         <table id="tablaListaActividades">
                              
                              <tr>
                                  <td>Organización solicitante: </td>
@@ -65,11 +65,11 @@
                          </table>
                      </h:form>
                      <h:form> 
-                                          
+                         <center>                 
                          <h:commandButton value="Validar"   styleClass="email2"  action="participacionActividad.xhtml" /> 
                          <h:commandButton value="Denegar"   styleClass="email2"  action="participacionActividad.xhtml"  /> 
-                           <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
-                  
+                         <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
+                         </center>
                      </h:form>
                   
                     
