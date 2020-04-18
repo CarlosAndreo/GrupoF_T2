@@ -31,15 +31,28 @@ import javax.inject.Named;
 public class CTRparticipacionActividad implements Serializable{
     
     private ArrayList<Actividad> actividades;
+    private ArrayList<Actividad> actRechazadas;
     private Actividad actividad; 
     
     
     public CTRparticipacionActividad() throws ParseException{
         actividades = new ArrayList<>();
+        actRechazadas = new ArrayList<>();
+        
         Organizacion ong = new Organizacion("Caritas");
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
         actividades.add(new Actividad(new Long(1), "Avanzadilla al tibet", dateformat3.parse("04/07/1998"), dateformat3.parse("04/07/2020"),ong, "Sin comenzar","tibet","Es una actividad que pretende realizar una caminita hacia al tibet","Tener minimo dos piernas","Voluntariado","Pendiente"));
+        actRechazadas.add(new Actividad(new Long(2), "Day Zero", dateformat3.parse("04/07/1999"), dateformat3.parse("04/07/2020"), "Sin comenzar","japón","Es una actividad que pretende inculcar valores","Tener  nivel de inglés","Voluntariado","Rechazada","sin posibilidad de poder hacerlo en japón, preferiblemente cambiar destino"));
+        actRechazadas.add(new Actividad(new Long(3), "Encuentro con niños", dateformat3.parse("04/07/2000"), dateformat3.parse("04/08/2021"), "Sin comenzar","la palmilla","Es una actividad que pretende lograr que los niños se sientan bien","Saber de educación","Voluntariado","Rechazada" ,"barrio muy conflictivo, mejor cambiar de localización"));
         
+    }
+
+    public ArrayList<Actividad> getActRechazadas() {
+        return actRechazadas;
+    }
+
+    public void setActRechazadas(ArrayList<Actividad> actRechazadas) {
+        this.actRechazadas = actRechazadas;
     }
     
     public String gestionar(){
@@ -54,6 +67,9 @@ public class CTRparticipacionActividad implements Serializable{
         this.actividades = actividades;
     }
 
+    public String modificarSolicitud(){
+        return "modificarSolicitud.xhtml";
+    }
     public Actividad getActividad() {
         return actividad;
     }

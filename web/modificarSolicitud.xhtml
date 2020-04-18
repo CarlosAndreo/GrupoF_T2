@@ -5,12 +5,12 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico" />
-    <ui:define name="title">Modificar Actividad</ui:define>
+    <ui:define name="title">Modificar Solicitud</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
     
-                <h1 var = "i" value="#{ListaActividades.actividades}">Modificar Actividad</h1>
+                <h1 var = "i" value="#{ListaSolicitudes.actRechazadas}">Modificar Solicitud</h1>
                 
                 <h:form id="ListaActividades">
                     <table>

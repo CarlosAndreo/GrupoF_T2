@@ -32,6 +32,7 @@ public class Actividad implements Serializable {
     private String TipoActividad;
     private String NombreActividad;
     private String EstadoSolicitud;
+    private String motivo;
     private Organizacion ong;
     @OneToMany
     private List<ParticipacionEnActividad> participantes;
@@ -45,6 +46,14 @@ public class Actividad implements Serializable {
     
     public Actividad(){
         
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
     }
 
     public Actividad(Long CodActividad, Integer Puntuacion, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String EstadoActividad, String TipoActividad, String NombreActividad, String EstadoSolicitud, List<ParticipacionEnActividad> participantes, List<ValoracionPublica> Valoracion, List<Matching> matching, List<Asignatura> Asignaturas) {
@@ -94,6 +103,21 @@ public class Actividad implements Serializable {
         this.Descripcion=descripcion;
         this.CapacidadesNecesarias=cap;
         this.TipoActividad=tipo;
+    }
+    
+    
+    public Actividad(Long CodActividad, String NombreActividad, Date FechaInicio, Date FechaFin, String EstadoActividad,String Localizacion,String descripcion,String cap,String tipo, String estadoSol,String motivo){
+        this.CodActividad = CodActividad;
+        this.NombreActividad = NombreActividad;
+        this.FechaInicio = FechaInicio;
+        this.FechaFin = FechaFin;
+        this.EstadoActividad = EstadoActividad;
+        this.EstadoSolicitud=estadoSol;
+        this.Localizacion=Localizacion;
+        this.Descripcion=descripcion;
+        this.CapacidadesNecesarias=cap;
+        this.TipoActividad=tipo;
+        this.motivo = motivo;
     }
 
   

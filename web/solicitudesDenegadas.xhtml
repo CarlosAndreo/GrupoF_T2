@@ -5,11 +5,13 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
-    <ui:define name="title">Solicitudes</ui:define>
+    <ui:define name="title">Solicitudes rechazadas</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI'}">
-                <h1>LISTA SOLICITUDES</h1>
+          
+                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
+                    <h1 var = "i" value="#{ListaSolicitudes.actRechazadas}">Solicitudes rechazadas</h1>
+                   
                 
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
@@ -19,42 +21,35 @@
                                         <th>Nombre Actividad</th>
                                         <th>Fecha Inicio</th>
                                         <th>Fecha Fin</th>
-                                        <th>Organización Solicitante</th>
                                         <th>Estado Actividad</th>
-                                         <th>Localizacion</th>
-                                          <th>Capacidades necesarias</th>
-                                           <th>Tipo de Actividad</th>
-                                            <th>Estado Solicitud</th>
+                                        <th>Motivo de la denegación</th>
                                 
                                 </tr>
                             </thead>
                         
                         <tbody>
-                            <ui:repeat var = "i" value="#{ListaSolicitudes.actividades}">
-                                                                
+                            <ui:repeat var = "i" value="#{ListaSolicitudes.actRechazadas}">
+                                <tr>                         
                                     <td>#{i.codActividad}</td>
                                     <td>#{i.nombreActividad}</td>
                                     <td>#{i.fechaInicio}</td>
                                     <td>#{i.fechaFin}</td>
-                                    <td>#{i.ong.nombre} </td>
-                                    <td>#{i.estadoActividad}</td> 
-                                    <td>#{i.localizacion}</td>
-                                    <td>#{i.capacidadesNecesarias}</td>
-                                    <td>#{i.tipoActividad} </td>
-                                    <td>#{i.estadoSolicitud}</td> 
+                                    <td>#{i.estadoActividad}</td>
+                                    <td>#{i.motivo}</td>
+                                    
 
-                                     <td> 
+                                     <td>
                                         
-                                         <h:form> <h:column> <h:commandButton styleClass="email2"  value="Gestionar solicitud" action="#{ListaSolicitudes.gestionar()}"/> </h:column> </h:form>
+                                         <h:form> <h:column> <h:commandButton styleClass="email2"  value="Modificar solicitud" action="#{ListaSolicitudes.modificarSolicitud()}"/> </h:column> </h:form>
                                     </td>
-                             
+                                </tr>
                             </ui:repeat>
                         </tbody>
                     </table>
                 </div>
                
-            </c:when>
-         
+                </c:when>
+       
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>

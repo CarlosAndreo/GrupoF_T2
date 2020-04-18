@@ -47,9 +47,12 @@
                     </h:panelGrid>
                 </h:form>
                 <h:form> 
-                    <h:commandButton value="Enviar propuesta" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
+                    <h:commandButton value="Enviar solicitud" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
                   
-                    <h:commandButton value="Cancelar" styleClass="email2"  action="CRUDActividades.xhtml" /> 
+                    <h:commandButton value="Solicitudes denegadas" styleClass="email2"  action="solicitudesDenegadas.xhtml" /> 
+                    
+                    <h:commandButton value="Cancelar" styleClass="email2"  action="inicio.xhtml" /> 
+                    
                 </h:form>
             </c:when>
            
