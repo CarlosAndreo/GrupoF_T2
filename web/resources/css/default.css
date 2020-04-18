@@ -4,7 +4,7 @@ body,html{
 body{
     margin:0;
     padding: 0;
-    background: black;
+    background: darkturquoise;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,10 +15,11 @@ body{
 .form-box{
     width: 400px;
     height: 400px;
-    background: #EF7F1A;
+    background: wheat;
     text-align: center;
     align-items: center;
     border-radius: 20px;
+    margin: 70px;
 }
 .logoUMA{
     margin-top:  100px;
@@ -36,55 +37,60 @@ body{
 .email2{
     margin: 20px;
     border-radius: 10px;
-    background-color: white;
-    text-align: center;
+   color: white;
+    background-color: #EF7F1A;
 }
+
 
 .btnCancelar{
 
     margin: 20px;
     border-radius: 10px;
     background-color: red;
-    color:black;
+    color:white;
   
 }
 
 .btnAceptar{
     margin: 20px;
     border-radius: 10px;
-    background-color: greenyellow;
-    color: black;
+    background-color: forestgreen;
+    color: white;
    
 }
 .btnOtro{
     margin: 20px;
     border-radius: 10px;
-    background-color: aquamarine;
-    color:black;
+    background-color: cornflowerblue;
+    color:white;
    
 }
 .boton{
     margin: 20px;
     border-radius: 10px;
     background-color: white;
+    color: white;
+    
 }
 h2{
-    margin: 60px;
-    padding: 0px;
+    margin: 30px;
+    padding: 10px;
     font-size: 50px;
     font-weight: bold;
     font-family: arial;
-    color: black;
-    border-bottom: 1px solid #AFAFAF;
+    color: darkturquoise;
+   
 }
+
+
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     border-bottom: 1px solid #AFAFAF; 
     text-align: center;
     font-size:  25px;
     font-weight: bold;
-    margin: 10px;
-    padding: 0px;
+    margin: 0px;
+    padding: 5px;
     color: #D20005;
 }
 

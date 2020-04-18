@@ -12,24 +12,33 @@
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'GESTOR'   ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
                 <h1>Redactar nuevo mensaje</h1>
                 
-                    <h:panelGrid columns="2" style="margin: 0 auto;" >
-                        <h:outputText value="Destinatario"/>
-                        <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
-                       
-                        
-                        <h:outputText value="Asunto"/>
-                        <h:inputText id ="asunto" value="#{ListaMensajes.m1.asunto}"/>
-                       
-                        
-                        <h:outputText value="Mensaje"/>
-                        <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
-                        
-                    </h:panelGrid>             
+                <h:form id="Mensajes">
+                    <table id="tablaListaActividades">
+                        <tr>
+                            <td>Destinatario</td>
+                            <td>
+                                <h:inputText id ="destinatario" value="#{ListaMensajes.m1.receptor}" />
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>Asunto</td>
+                            <td><h:inputText id ="asunto" value="#{ListaMensajes.m1.asunto}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Mensaje</td>
+                            <td>
+                                <h:inputText id ="mensaje" value="#{ListaMensaje.m1.texto}" />
+                            </td> 
+                        </tr>
+                    </table>
+                    
+                    
+                </h:form>
                 <h:form>
                     <center>
-                    <h:commandButton value="Enviar mensaje" styleClass="email2"  action="CreateMensajes.xhtml" /> 
+                    <h:commandButton value="Enviar mensaje" styleClass="btnOtro"  action="CreateMensajes.xhtml" /> 
                   
-                    <h:commandButton value="Cancelar" styleClass="email2"  action="miPerfilUsuario.xhtml" /> 
+                    <h:commandButton value="Cancelar" styleClass="btnCancelar"  action="miPerfilUsuario.xhtml" /> 
                     </center>
                 </h:form>
             </c:when>

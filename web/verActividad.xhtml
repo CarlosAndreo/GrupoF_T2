@@ -13,45 +13,45 @@
                 <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>              
                 <h:form id="ListaActividades">
                     <table id="tablaListaActividades">
-                        <td>Código de Actividad: #{i.codActividad}</td>
+                        <td>Código de Actividad #{i.codActividad}</td>
                         <tr>
-                            <td>Nombre Actividad: </td>
+                            <td>Nombre Actividad </td>
 
                             <td><h:outputText  value="#{i.nombreActividad}"/></td>
                         </tr>
 
                         <tr>
-                            <td>Fecha Inicio: </td>
+                            <td>Fecha Inicio </td>
                             <td><h:outputText  value="#{i.fechaInicio}"/></td>
                         </tr>
                         
                         <tr>
-                            <td>Fecha Fin: </td>
+                            <td>Fecha Fin </td>
                             <td><h:outputText  value="#{i.fechaFin}"/></td>
                         </tr>
 
                         <tr>
-                            <td>Localización: </td>
+                            <td>Localización </td>
                             <td><h:outputText  value="#{i.localizacion}"/></td>
                         </tr>
                         
                         <tr>
-                            <td>Descripción: </td>
+                            <td>Descripción </td>
                             <td><h:outputText  value="#{i.descripcion}"/></td>
                         </tr>      
                      
                         <tr>
-                            <td>Capacidades necesarias: </td>
+                            <td>Capacidades necesarias </td>
                             <td><h:outputText  value="#{i.capacidadesNecesarias}"/></td>
                         </tr>  
                         
                         <tr>
-                            <td>Tipo de actividad: </td>
+                            <td>Tipo de actividad </td>
                             <td><h:outputText  value="#{i.tipoActividad}"/></td>
                         </tr>  
                         
                         <tr>
-                            <td>Estado de la actividad: </td>
+                            <td>Estado de la actividad </td>
                             <td><h:outputText  value="#{i.estadoActividad}"/></td>
                         </tr>
                                             
@@ -61,9 +61,9 @@
                 <h:form> 
                   <br/>
                   <center>
-                    <h:column> <h:commandButton value="Petición de inscripción"  styleClass="email2"  action="CRUDActividades.xhtml" /> </h:column> 
-                    <h:column> <h:commandButton value="Volver Atrás"   styleClass="email2"  action="CRUDActividades.xhtml" /> </h:column> 
-                    <h:column> <h:commandButton value="Valorar Actividad"   styleClass="email2"  action="valoracionesPublicas.xhtml" /> </h:column> 
+                    <h:column> <h:commandButton value="Petición de inscripción"  styleClass="btnOtro"  action="CRUDActividades.xhtml" /> </h:column> 
+                    <h:column> <h:commandButton value="Valorar Actividad"   styleClass="btnAceptar"  action="valoracionesPublicas.xhtml" /> </h:column> 
+                    <h:column> <h:commandButton value="Volver Atrás"   styleClass="btnCancelar"  action="CRUDActividades.xhtml" /> </h:column> 
                     <!-- Incluir un if para que solo se muestre este boton si ya se participa en la actv -->
                   </center>
                 </h:form>
@@ -122,7 +122,7 @@
                      <h:form> 
                        <br/>
                        <center>
-                         <h:commandButton value="Volver Atrás"  styleClass="email2"  action="CRUDActividades.xhtml" /> 
+                         <h:commandButton value="Volver Atrás"  styleClass="btnCancelar"  action="CRUDActividades.xhtml" /> 
                        </center>
                      </h:form>
                  

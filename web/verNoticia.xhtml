@@ -31,7 +31,7 @@
                 <h:form> 
                   <br/>
                   <center>
-                    <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                    <h:column> <h:commandButton value="Volver Atrás" styleClass="btnCancelar"  action="noticias.xhtml" /> </h:column> 
                   </center>
                 </h:form>
                  
@@ -39,7 +39,7 @@
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                     <h1 var = "i" value="#{ListaNoticias.noticias}">Ver noticia</h1>
                         <h:form id="ListaNoticias">
-                        <table>
+                        <table id="tablaListaActividades">
                              <td>Código de Noticia: #{i.codNoticia}</td>
                         <tr>
                             <td>Nombre noticia: </td>
@@ -59,7 +59,7 @@
                      <h:form> 
                        <br/>
                        <center>
-                         <h:column> <h:commandButton value="Volver Atrás" styleClass="email2"  action="noticias.xhtml" /> </h:column> 
+                         <h:column> <h:commandButton value="Volver Atrás" styleClass="btnCancelar"  action="noticias.xhtml" /> </h:column> 
                        </center>
                      </h:form>
                  

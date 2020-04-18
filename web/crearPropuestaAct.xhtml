@@ -12,48 +12,52 @@
                 <h1>Crear nueva PROPUESTA</h1>
                 
                 <h:form id="tablaListaActividades" >
-                    <h:panelGrid columns="2" >
-                        <h:outputText value="NombreActividad"/>
-                        <h:inputText id ="nom" value="#{ListaActividades.a.nombreActividad}" />
+                    <table id="tablaListaActividades">
+                        <tr>
+                            <td>Nombre de Actividad</td>
+                            <td>  <h:inputText id ="nom" value="#{ListaActividades.a.nombreActividad}" /></td>
+                        </tr>
+                        
+                        
+                          <tr>
+                            <td>Fecha de Inicio</td>
+                            <td>   <h:inputText id ="fI" value="#{ListaActividades.a.fechaInicio}"/></td>
+                        </tr>
+                          <tr>
+                            <td>Fecha Fin</td>
+                            <td>    <h:inputText id ="fF" value="#{ListaActividades.a.fechaFin}" /></td>
+                        </tr>
+                          <tr>
+                            <td>Localización</td>
+                            <td>   <h:inputText id ="loc" value="#{ListaActividades.a.localizacion}"/></td>
+                        </tr>
+                          <tr>
+                            <td>Descripción</td>
+                            <td>     <h:inputText id ="des" value="#{ListaActividades.a.descripcion}"/></td>
+                        </tr>
+                          <tr>
+                            <td>Capacidades necesarias</td>
+                            <td>     <h:inputText id ="cap" value="#{ListaActividades.a.capacidadesNecesarias}" /></td>
+                        </tr>
+                          <tr>
+                            <td>Tipo de Actividad</td>
+                            <td>    <h:inputText id ="tipo" value="#{ListaActividades.a.tipoActividad}"/></td>
+                        </tr>
+                          <tr>
+                            <td>Estado de Actividad</td>
+                            <td>     <h:inputText id ="estado" value="#{ListaActividades.a.estadoActividad}"/></td>
+                        </tr>
+                    </table>
                        
-                        <h:outputText value="FechaInicio"/>
-                        <h:inputText id ="fI" value="#{ListaActividades.a.fechaInicio}"/>
-                       
-                        
-                        <h:outputText value="FechaFin"/>
-                        <h:inputText id ="fF" value="#{ListaActividades.a.fechaFin}" />
-                     
-                        
-                        <h:outputText value="Localizacion"/>
-                        <h:inputText id ="loc" value="#{ListaActividades.a.localizacion}"/>
-                      
-                        
-                         <h:outputText value="Descripcion"/>
-                         <h:inputText id ="des" value="#{ListaActividades.a.descripcion}"/>
-                                               
-                        <h:outputText value="Capacidades necesarias"/>
-                        <h:inputText id ="cap" value="#{ListaActividades.a.capacidadesNecesarias}" />
-                      
-                        
-                        <h:outputText value="tipo actividad"/>
-                        <h:inputText id ="tipo" value="#{ListaActividades.a.tipoActividad}"/>
-                       
-                        
-                        <h:outputText value="estado actividad"/>
-                        <h:inputText id ="estado" value="#{ListaActividades.a.estadoActividad}"/>
-                       
-                       
-                        
-
-                    </h:panelGrid>
+                    
                 </h:form>
                 <h:form> 
                     <center>    
-                    <h:commandButton value="Enviar solicitud" styleClass="email2"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
+                    <h:commandButton value="Enviar solicitud" styleClass="btnAceptar"  action="#{ListaActividades.create(ListaActividades.a)}" /> 
                   
-                    <h:commandButton value="Solicitudes denegadas" styleClass="email2"  action="solicitudesDenegadas.xhtml" /> 
+                    <h:commandButton value="Solicitudes denegadas" styleClass="btnOtro"  action="solicitudesDenegadas.xhtml" /> 
                     
-                    <h:commandButton value="Cancelar" styleClass="email2"  action="inicio.xhtml" /> 
+                    <h:commandButton value="Cancelar" styleClass="btnCancelar"  action="inicio.xhtml" /> 
                     </center> 
                 </h:form>
             </c:when>

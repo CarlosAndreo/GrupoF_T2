@@ -31,13 +31,13 @@
                                     <td>#{i.fecha}</td>
                                     <center>
                                     <td>
-                                        <h:form> <h:column> <h:commandButton styleClass="email2"   value ="Ver"  action="#{ListaNoticias.verNoticia()}"/></h:column></h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="btnOtro"   value ="Ver"  action="#{ListaNoticias.verNoticia()}"/></h:column></h:form>
                                     </td>
                                     <td>                                     
-                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Modificar"  action="#{ListaNoticias.modificarNoticia()}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="btnAceptar"  value="Modificar"  action="#{ListaNoticias.modificarNoticia()}"/> </h:column> </h:form>
                                     </td>
                                     <td>          
-                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Borrar"  action="#{ListaNoticias.borrarNoticia(i.codNoticia)}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="btnCancelar"  value="Borrar"  action="#{ListaNoticias.borrarNoticia(i.codNoticia)}"/> </h:column> </h:form>
                                     </td>
                                     </center>
                                 </tr>
@@ -94,12 +94,12 @@
                         <tbody>
                             <ui:repeat var = "i" value="#{ListaNoticias.noticias}">
                                 <tr>                                
-                                    
+                                    <td>#{i.codNoticia}</td>
                                     <td>#{i.titulo}</td>
                                     <td>#{i.descripcion}</td>
                                     <td>#{i.fecha}</td>        
                                     <td> 
-                                        <h:form> <h:column> <h:commandButton styleClass="email2"  value="Ver" action="#{ListaNoticias.verNoticia()}"/> </h:column> </h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="btnOtro"  value="Ver" action="#{ListaNoticias.verNoticia()}"/> </h:column> </h:form>
                                     </td>                                    
                                 </tr>
                             </ui:repeat>

@@ -12,7 +12,7 @@
         
                 <h1 var = "i" value="#{Evaluaciones.participaciones}">Evaluar</h1>              
                 <h:form id="Evaluacion">
-                    <table>
+                    <table id="tablaListaActividades">
                         
                         <tr>
                             <td>ID Participacion: </td>
@@ -57,8 +57,8 @@
                 <h:form> 
                   <br/>
                   <center>
-                  <h:column> <h:commandButton value="Evaluar"  styleClass="email2"  action="#{controlAutorizacion.EvaluarUser()}" /> </h:column> 
-                  <h:column> <h:commandButton value="Volver Atrás"   styleClass="email2"  action="#{controlAutorizacion.EvaluarUser()}" /> </h:column> 
+                  <h:column> <h:commandButton value="Evaluar"  styleClass="btnAceptar"  action="#{controlAutorizacion.EvaluarUser()}" /> </h:column> 
+                  <h:column> <h:commandButton value="Volver Atrás"   styleClass="btnCancelar"  action="#{controlAutorizacion.EvaluarUser()}" /> </h:column> 
                   </center>
 
                 </h:form>

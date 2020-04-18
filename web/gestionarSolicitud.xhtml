@@ -14,14 +14,14 @@
 
                         <h:form id="ListaActividades">
                          <table id="tablaListaActividades">
-                             
+                              
+                             <td>Código de Actividad: #{i.codActividad}</td>
                              <tr>
                                  <td>Organización solicitante: </td>
 
                                  <td><h:outputText  value="#{i.ong.nombre}"/></td>
                              </tr>
-                             
-                             <td>Código de Actividad: #{i.codActividad}</td>
+                            
                              
                              <tr>
                                  <td>Nombre Actividad: </td>
@@ -66,9 +66,9 @@
                      </h:form>
                      <h:form> 
                          <center>                 
-                         <h:commandButton value="Validar"   styleClass="email2"  action="participacionActividad.xhtml" /> 
-                         <h:commandButton value="Denegar"   styleClass="email2"  action="participacionActividad.xhtml"  /> 
-                         <h:commandButton value="Volver atrás"   styleClass="email2"  action="participacionActividad.xhtml" /> 
+                         <h:commandButton value="Validar"   styleClass="btnAceptar"  action="participacionActividad.xhtml" /> 
+                         <h:commandButton value="Denegar"   styleClass="btnCancelar"  action="participacionActividad.xhtml"  /> 
+                         <h:commandButton value="Volver atrás"   styleClass="btnOtro"  action="participacionActividad.xhtml" /> 
                          </center>
                      </h:form>
                   
