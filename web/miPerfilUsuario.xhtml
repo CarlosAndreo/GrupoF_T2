@@ -43,10 +43,35 @@
             
                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO'}">
                 <h1>PERFIL DE #{controlAutorizacion.usuario.nombre.toUpperCase()} #{controlAutorizacion.usuario.apellidos.toUpperCase()}</h1>
+                <center>
+                    
+                    
+                    
+               
+                <h:form class="PerfilUsuario">
+                        
+                      
+                    <img alt="Perfil Usuario"  width="160" height="150" src="./resources/img/perfil.png"/>
+                   
+                       
+                        <h:commandButton  styleClass="btnCambiar"  value="Cambiar foto" action="#"/>                            
+                           
+                     
               
+                   
+                   
+                   
+                        
+                    </h:form>
+                   
                 
+                
+                   
                 <h:form id="controlAutorizacion">
+                    
+                      
                    <table id="tablaListaActividades">
+                      
                         <tr>
                             <td>Código de usuario: </td>
 
@@ -107,9 +132,9 @@
                         </tr>
                            
                     </table>
-                    
+            
                 </h:form>
-              
+                   
                 <h:form>
                     <center>
                     <h:column> <h:commandButton styleClass="btnAceptar"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column>
@@ -118,18 +143,7 @@
                     <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>   
                     </center>
                 </h:form>
-                
-               <div class="PerfilUsuario">
-                    <img alt="Perfil Usuario" align="left" width="100" height="100" src="./resources/img/PerfilUsuario.jfif"/>
-                   
-                   </div>
-                <h:form class="btnFoto">
-                   
-                    
-                        <h:commandButton styleClass="btnAceptar"  value="Cambiar foto perfil" action="#" />
-                    </h:form>
-                
-                
+               </center>  
             </c:when>
                       
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
