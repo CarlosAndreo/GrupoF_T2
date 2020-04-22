@@ -86,13 +86,7 @@
                             <td>Formacion: </td>
 
                             <td><h:outputText  value="#{controlAutorizacion.usuario.formacion}"/></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Foto: </td>
-
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.foto}"/></td>
-                        </tr>
+                        </tr>   
                         
                         <tr>
                             <td>Telefono: </td>
@@ -111,8 +105,9 @@
 
                             <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
                         </tr>
-                        
+                           
                     </table>
+                    
                 </h:form>
               
                 <h:form>
@@ -123,7 +118,18 @@
                     <h:column> <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" /> </h:column>   
                     </center>
                 </h:form>
-               
+                
+               <div class="PerfilUsuario">
+                    <img alt="Perfil Usuario" align="left" width="100" height="100" src="./resources/img/PerfilUsuario.jfif"/>
+                   
+                   </div>
+                <h:form class="btnFoto">
+                   
+                    
+                        <h:commandButton styleClass="btnAceptar"  value="Cambiar foto perfil" action="#" />
+                    </h:form>
+                
+                
             </c:when>
                       
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">

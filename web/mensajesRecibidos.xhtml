@@ -34,7 +34,6 @@
                                     <td>
      
                                         <h:form> <h:column> <h:commandButton styleClass="btnCancelar" value="Borrar" action="#{ListaMensajes.borrarMensaje(i.IDMensaje)}" /> </h:column> </h:form>
-                                      
                                     </td>
                                     </center>
                                 </tr>
@@ -42,7 +41,11 @@
                         </tbody>
                     </table>
                 </div>
-               
+                    <h:form>
+                        <center>
+                            <h:commandButton value="Volver Atrás" styleClass="btnCancelar"  action="#{controlAutorizacion.perfilUsuario()}" />
+                        </center>
+                    </h:form>
                 </c:when>
        
             <c:otherwise>

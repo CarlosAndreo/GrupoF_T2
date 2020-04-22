@@ -21,6 +21,21 @@ body{
     border-radius: 20px;
     margin: 70px;
 }
+.btnFoto{
+    text-align: center;
+    align-items: center;
+    margin: 70px;
+}
+
+.PerfilUsuario{
+   
+    padding: 1px; 
+    border-radius: 20px;
+     width: 100px;
+    height: 100px;
+     margin: 70px;
+    
+}
 .logoUMA{
     margin-top:  100px;
     padding-top: 100px 

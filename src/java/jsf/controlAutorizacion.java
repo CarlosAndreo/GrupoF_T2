@@ -74,6 +74,7 @@ public class controlAutorizacion implements Serializable {
         return "inicio.xhtml";
     }
     
+    
     public String home() {
         // Devuelve la página Home dependiendo del rol del usuario
         if(getUsuario()==null){
