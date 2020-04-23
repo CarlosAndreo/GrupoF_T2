@@ -17,7 +17,9 @@ import javax.inject.Named;
 
 /**
  *
- * @author Alex
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  */
 
 @Named(value ="ListaNoticias")

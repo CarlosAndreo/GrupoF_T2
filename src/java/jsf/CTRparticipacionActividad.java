@@ -21,7 +21,9 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 /**
  *
- * @author Alex
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  * Esta clase muestra las solicitudes de los alumnos, para formar parte de las 
  * actividades
  */
@@ -34,7 +36,6 @@ public class CTRparticipacionActividad implements Serializable{
     private ArrayList<Actividad> actRechazadas;
     private Actividad actividad; 
     
-    
     public CTRparticipacionActividad() throws ParseException{
         actividades = new ArrayList<>();
         actRechazadas = new ArrayList<>();
@@ -46,7 +47,7 @@ public class CTRparticipacionActividad implements Serializable{
         actRechazadas.add(new Actividad(new Long(3), "Encuentro con niños", dateformat3.parse("04/07/2000"), dateformat3.parse("04/08/2021"), "Sin comenzar","la palmilla","Es una actividad que pretende lograr que los niños se sientan bien","Saber de educación","Voluntariado","Rechazada" ,"barrio muy conflictivo, mejor cambiar de localización"));
         
     }
-
+    
     public ArrayList<Actividad> getActRechazadas() {
         return actRechazadas;
     }

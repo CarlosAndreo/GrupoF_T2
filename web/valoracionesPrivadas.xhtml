@@ -5,36 +5,53 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
-    <ui:define name="title">ValoracionesPublicas</ui:define>
+    <ui:define name="title">ValoracionesPrivadas</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() != null}">
-                <h1>Valoraciones Públicas</h1>
-                <h1 var = "i" value="#{ValoracionesPublicas.v}"></h1>     
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
+                <h1>Evaluaciones Privadas</h1>
                 <center>
-                    
-                    
-                <h:form id="Valoracion">
-                    <table id="tablaListaActividades">
-                        <tr>
-                           <td>Calificacion</td>
-                           <td><h:inputText  value="#{i.calificacion}"/></td>
-                        </tr>
-                        <tr>
-                            <td>Comentarios</td>   
-                             <td><h:inputText  value="#{i.comentariosUsuarios}"/></td>
-                        </tr>
+                                       
+                <div class="bordeTablaActividades">
+                    <table id="tablaListaUsuarios">
+                        <thead>
+                                <tr>
+                                        <th>Id usuario</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>DNI</th>
+                                        <th>Fecha</th>
+                                        <th>Email</th>
+                                        <th>Horas dedicadas</th>
+                                        <th>Telefono</th>
+                                        <th>Idioma</th>
+                                        <th>Actividad participada</th>
+                                </tr>
+                            </thead>
+                        
+                        <tbody>
+                            <ui:repeat var = "i" value="#{controlAutorizacion.usuario}">
+                                <tr>                                
+                                    <td>#{i.userID}</td>
+                                    <td>#{i.nombre}</td>
+                                    <td>#{i.apellidos}</td>
+                                    <td>#{i.DNI}</td>
+                                    <td>#{i.fechaNacimiento}</td>
+                                    <td>#{i.email}</td>
+                                    <td>#{i.telefono}</td>
+                                    <td>#{i.idioma}</td>
+                                    <td>
+                                        <center>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2" value ="Evaluar" action="evaluacion.xhtml"/></h:column></h:form>
+                                        </center>
+                                        
+                                    </td>             
+                                </tr>
+                            </ui:repeat>
+                        </tbody>
                     </table>
-                    </h:form>
-                    
+                </div>
                 </center>
-                <h:form>
-                    <center>
-                     <h:commandButton styleClass="btnAceptar" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/>
-                     <h:commandButton styleClass="btnCancelar" value ="Volver Atrás" action="CRUDActividades.xhtml"/>
-                    </center>
-                </h:form>
-                    
             </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
@@ -42,3 +59,4 @@
         </c:choose>
     </ui:define>
 </ui:composition>
+

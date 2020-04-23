@@ -28,8 +28,7 @@ public class Usuario implements Serializable {
     private void setUserId(Long UserID) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
+   
     public enum Rol{
         PDI,PAS,ALUMNO,GESTOR, ORGANIZACION
      
@@ -83,7 +82,7 @@ public class Usuario implements Serializable {
         setRol(tipo);
     }
 
-    public Usuario(Long UserID, String Nombre, String Apellidos, String Password, Date FechaNacimiento, String DNI, String email, String direccion, String formacion, String foto, Integer telefono, String idioma, Rol Rol) {       
+    public Usuario(Long UserID, String Nombre, String Apellidos, String Password, Date FechaNacimiento, String DNI, String email, String direccion, String formacion, Integer telefono, String idioma, Rol Rol) {       
         setUserID(UserID);
         setNombre(Nombre);
         setApellidos(Apellidos);
@@ -93,7 +92,6 @@ public class Usuario implements Serializable {
         setEmail(email);
         setDireccion(direccion);
         setFormacion(formacion);
-        setFoto(foto);
         setTelefono(telefono);
         setIdioma(idioma);
         setRol(Rol);

@@ -5,6 +5,7 @@
  */
 package jsf;
 
+import grupof.ValoracionPrivada;
 import grupof.ValoracionPublica;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,9 +14,11 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
- *
- * @author fabri
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  */
+
 @Named ( value = "ValoracionesPublicas")
 @SessionScoped
 public class valoracionController implements Serializable {
@@ -28,7 +31,7 @@ public class valoracionController implements Serializable {
         valoraciones = new ArrayList<>();
         valoraciones.add(new ValoracionPublica(new Long (1), 7, "Buena actividad"));
     }
-
+    
     public String crear(){
         v = new ValoracionPublica(this.ID);
         ID++;

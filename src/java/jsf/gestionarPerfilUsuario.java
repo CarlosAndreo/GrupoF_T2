@@ -17,9 +17,11 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 /**
- *
- * @author GrupoF
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  */
+
 @Named(value ="PerfilUsuario")
 @SessionScoped
 public class gestionarPerfilUsuario implements Serializable{

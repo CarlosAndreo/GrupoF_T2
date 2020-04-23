@@ -12,14 +12,20 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.faces.context.FacesContext;
 
+/**
+ *
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
+ */
+
 @Named(value = "controlAutorizacion")
 @SessionScoped
 public class controlAutorizacion implements Serializable {
 
     private Usuario usuario;
     
-    private Organizacion org;
-    
+    private Organizacion org;    
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -41,7 +47,6 @@ public class controlAutorizacion implements Serializable {
         this.org = org;
     }
     
-  
     public String CRUDActividades(){
         return "CRUDActividades.xhtml";
     }
@@ -63,9 +68,7 @@ public class controlAutorizacion implements Serializable {
     }
     
     public String EvaluarUser(){
-
         return "evaluaciones.xhtml";
-
     }
     public String Propuesta(){
         return "crearPropuestaAct.xhtml";
@@ -74,7 +77,10 @@ public class controlAutorizacion implements Serializable {
         return "inicio.xhtml";
     }
     
-    
+    public String valoracionesPrivadas(){
+        return "valoracionesPrivadas.xhtml";
+    }
+     
     public String home() {
         // Devuelve la página Home dependiendo del rol del usuario
         if(getUsuario()==null){

@@ -14,7 +14,9 @@ import javax.inject.Named;
 
 /**
  *
- * @author aleex
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  */
 @Named(value="ListaMensajes")
 @SessionScoped

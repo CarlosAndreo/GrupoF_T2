@@ -24,10 +24,11 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 /**
- *
- * @author francis
+ *  SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  * usuario Gestor credenciales:
- *  email: bd@mail.com
+ * email: bd@mail.com
  * pass:bd
  */
 @Named(value = "login")
@@ -49,26 +50,20 @@ public class Login {
        usuarios = new ArrayList<Usuario>();
       
        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");  
-       usuarios.add(new Usuario(new Long(1), "ALUMNO", "MARTINEZ", "alumno", dateformat3.parse("05/03/2020"), "12456478W", "alumno@uma.es", "Avenida wela", "Es un pipas", "Foto", 12345679, "Espaniol", Rol.ALUMNO)); 
-       usuarios.add(new Usuario(new Long(2), "PDI", "", "pdi", dateformat3.parse("05/03/2020"), "12456478W", "pdi@uma.es", "paseo de los moros", "si", "Foto", 12345679, "Espaniol", Rol.PDI)); 
-       usuarios.add(new Usuario(new Long(3), "PAS", "", "pas", dateformat3.parse("05/03/2020"), "12456478W", "pas@uma.es", "jefaso avenido", "si", "Foto", 12345679, "Espaniol", Rol.PAS));
+       usuarios.add(new Usuario(new Long(1), "ALUMNO", "MARTINEZ", "alumno", dateformat3.parse("05/03/2020"), "12456478W", "alumno@uma.es", "Avenida wela", "Es un pipas", 12345679, "Espaniol", Rol.ALUMNO)); 
+       usuarios.add(new Usuario(new Long(2), "PDI", "", "pdi", dateformat3.parse("05/03/2020"), "12456478W", "pdi@uma.es", "paseo de los moros", "si", 12345679, "Espaniol", Rol.PDI)); 
+       usuarios.add(new Usuario(new Long(3), "PAS", "", "pas", dateformat3.parse("05/03/2020"), "12456478W", "pas@uma.es", "jefaso avenido", "si", 12345679, "Espaniol", Rol.PAS));
        usuarios.add(new Usuario(new Long(4),"admin@mail.com","admin",Rol.GESTOR));
        org =  new Organizacion(new Long(6), "Bebesita", "Madrid", "Salvar vidas contra Coronavirus");
- 
-        usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
+       usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }
     
-    public String borrarPerfil(int id){
-        
-       
+    public String borrarPerfil(int id){  
         usuarios.remove(id-1);
         return "logout.xhtml";
     }
-       
-    
-    
-    public List<Usuario> getUsuarios(){
-        
+         
+    public List<Usuario> getUsuarios(){       
         return this.usuarios;
     }
 
@@ -85,7 +80,6 @@ public class Login {
         return contrasenia;
     }
 
-
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
@@ -98,7 +92,6 @@ public class Login {
         this.org = org;
     }
     
-
     public String autenticar() {
         // Implementar este método
         FacesContext ctx = FacesContext.getCurrentInstance();
@@ -107,8 +100,7 @@ public class Login {
         boolean user = false;
       
         Usuario usuario = null;
-      
-        
+         
         while(iter.hasNext() && !user){
             usuario = iter.next();
             

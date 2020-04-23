@@ -19,7 +19,9 @@ import javax.inject.Named;
 
 /**
  *Hay que modificar el actualizar
- * @author aleex
+ * SII
+ * 3ºA Ingeniería Informática 
+ * @author GRUPOF
  */
 @Named(value ="ListaActividades")
 @SessionScoped
