@@ -66,9 +66,11 @@ public class controlAutorizacion implements Serializable {
     public String perfilUsuario(){
         return "miPerfilUsuario.xhtml";
     }
+
     public String modificarParticipacion(){
         return "CRUDActividades.xhtml";
     }
+
     
     public String EvaluarUser(){
         return "evaluaciones.xhtml";

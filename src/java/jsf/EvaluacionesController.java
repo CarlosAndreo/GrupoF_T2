@@ -42,6 +42,7 @@ public class EvaluacionesController implements Serializable {
     private ArrayList<ParticipacionEnActividad> participaciones;
     private Usuario usuario;
     private Actividad actividad;
+
     private ParticipacionEnActividad p;
 
     public ArrayList<ParticipacionEnActividad> getParticipaciones() {
@@ -108,7 +109,4 @@ public class EvaluacionesController implements Serializable {
     }
      
      
-     
 }
-
-

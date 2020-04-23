@@ -72,9 +72,12 @@ private Actividad a = new Actividad();
         actividades.remove(id-1);
         return "CRUDActividades.xhtml";
     }
+
     public String inscripciones(){
     return "inscripciones.xhtml"; 
     }
+
+  
     
     public String modificarActividad(){
      
