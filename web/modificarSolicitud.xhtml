@@ -11,7 +11,8 @@
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
     
                 <h1 var = "i" value="#{ListaSolicitudes.actRechazadas}">Modificar Solicitud</h1>
-                
+                <center>
+                 
                 <h:form id="ListaActividades">
                     <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codActividad}</td>
@@ -69,6 +70,8 @@
                     
                     </table>
                 </h:form>
+                       
+                </center>
                 <h:form> 
                     <center>
                 <h:commandButton value="Actualizar Solicitud" styleClass="btnAceptar"  action="#" />            

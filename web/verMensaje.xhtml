@@ -10,7 +10,9 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'GESTOR'|| controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
         
-                <h1 var = "i" value="#{ListaMensajes.mensajes}">Ver Mensaje</h1>              
+                <h1 var = "i" value="#{ListaMensajes.mensajes}">Ver Mensaje</h1>             
+                <center>
+                   
                 <h:form id="ListaMensajes">
                     <table id="tablaListaActividades">
                         <tr>
@@ -32,6 +34,8 @@
                         
                     </table>
                 </h:form>
+                     
+                </center>
                 <h:form> 
                   <br/>
                   <center>

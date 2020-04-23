@@ -11,7 +11,8 @@
         
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI'}">
                     <h1 var = "i" value="#{ListaSolicitudes.actividades}">Gestionar solicitud</h1>
-
+                    <center>
+                      
                         <h:form id="ListaActividades">
                          <table id="tablaListaActividades">
                               
@@ -64,6 +65,9 @@
                        
                          </table>
                      </h:form>
+                          
+                        
+                    </center>
                      <h:form> 
                          <center>                 
                          <h:commandButton value="Validar"   styleClass="btnAceptar"  action="participacionActividad.xhtml" /> 

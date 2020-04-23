@@ -10,6 +10,8 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                 <h1>PERFIL DE ORGANIZACION</h1>
+                <center>
+                 
                 <h:form id="PerfilOrganizacion">
                     <table id="tablaListaActividades">                   
                         <tr>
@@ -38,6 +40,8 @@
                         
                     </table>
                 </h:form>
+                       
+                </center>
                 <h:form> 
                 <center>
                     <h:column> <h:commandButton styleClass="btnAceptar"  value="Guardar cambios"/> </h:column> 
@@ -51,6 +55,9 @@
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' }">
                 <h1>PERFIL DE #{controlAutorizacion.usuario.nombre.toUpperCase()} #{controlAutorizacion.usuario.apellidos.toUpperCase()}</h1>
                 
+                <center>
+                    
+                 
                 <h:form id="PerfilUsuario">
                     <table id="tablaListaActividades">               
                         <tr>
@@ -124,6 +131,8 @@
                         </tr>
                     </table>
                 </h:form>
+                       
+                </center>
                 <h:form>
                    <center>
                     <h:column> <h:commandButton styleClass="btnAceptar"  value="Guardar cambios"/> </h:column> 
@@ -134,7 +143,9 @@
             </c:when>
              <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                   <h1>PERFIL DE GESTOR</h1>
-                
+                  <center>
+                      
+                      
                 <h:form id="PerfilUsuario">
                     <table id="tablaListaActividades">                    
                         <tr>
@@ -164,6 +175,7 @@
                         </tr>
                     </table>
                 </h:form>
+                  </center>
                 <h:form>
                     <center>
                     <h:column> <h:commandButton styleClass="btnAceptar"  value="Guardar cambios"/> </h:column> 

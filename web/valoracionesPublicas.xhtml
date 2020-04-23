@@ -10,7 +10,10 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() != null}">
                 <h1>Valoraciones Públicas</h1>
-                <h1 var = "i" value="#{ValoracionesPublicas.v}"></h1>              
+                <h1 var = "i" value="#{ValoracionesPublicas.v}"></h1>     
+                <center>
+                    
+                    
                 <h:form id="Valoracion">
                     <table id="tablaListaActividades">
                         <tr>
@@ -23,6 +26,8 @@
                         </tr>
                     </table>
                     </h:form>
+                    
+                </center>
                 <h:form>
                     <center>
                      <h:commandButton styleClass="btnAceptar" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/>

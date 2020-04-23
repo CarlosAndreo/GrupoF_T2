@@ -11,6 +11,9 @@
             
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                   <h1>PERFIL DE GESTOR</h1>
+                  
+                  <center>
+                     
                 
                 <h:form id="controlAutorizacion">
                      <table id="tablaListaActividades">
@@ -29,6 +32,8 @@
                         </tr>        
                     </table>
                 </h:form>
+                       
+                  </center>
                 <h:form> 
                 <center>     
                     <h:commandButton styleClass="btnAceptar"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" />
@@ -148,7 +153,8 @@
                       
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                   <h1>PERFIL DE ORGANIZACION</h1>
-                
+                  <center>
+                    
                 <h:form id="controlAutorizacion">
                     <table id="tablaListaActividades">
               
@@ -180,6 +186,8 @@
                         
                     </table>
                 </h:form>
+                        
+                  </center>
                 <h:form> 
                     <center>
                     <h:column> <h:commandButton styleClass="btnAceptar"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" /> </h:column>

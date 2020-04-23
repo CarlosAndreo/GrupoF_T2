@@ -11,7 +11,8 @@
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
     
                 <h1 var = "i" value="#{ListaActividades.actividades}">Modificar Actividad</h1>
-                
+                <center>
+                   
                 <h:form id="ListaActividades">
                     <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codActividad}</td>
@@ -69,6 +70,8 @@
                     
                     </table>
                 </h:form>
+                     
+                </center>
                 <h:form>
                     <center>
                     <h:commandButton value="Actualizar Actividad" styleClass="btnAceptar"  action="#" /> 

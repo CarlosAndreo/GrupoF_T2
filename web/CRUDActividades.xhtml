@@ -32,6 +32,9 @@
                       </div>
                      
                       </center>
+                <center>
+                    
+                   
           
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
@@ -77,7 +80,8 @@
                         </tbody>
                     </table>
                 </div>
-               
+                
+                </center>
             </c:when>
             
             <c:when  test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS'}">
@@ -105,7 +109,9 @@
                       </div>
                      
                       </center>
-                
+                      <center>
+                          
+                       
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
                         <thead>
@@ -145,7 +151,8 @@
                         </tbody>
                     </table>
                 </div>
-                
+                   
+                      </center>
             </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>

@@ -10,7 +10,9 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI'}">
                 <h1>EVALUACIONES</h1>
-        
+                <center>
+                    
+                    
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
                         <thead>
@@ -46,6 +48,7 @@
                         </tbody>
                     </table>
                 </div>
+                </center>
             </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>

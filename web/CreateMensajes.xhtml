@@ -11,7 +11,8 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'GESTOR'   ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
                 <h1>Redactar nuevo mensaje</h1>
-                
+                <center>
+                   
                 <h:form id="Mensajes">
                     <table id="tablaListaActividades">
                         <tr>
@@ -34,6 +35,9 @@
                     
                     
                 </h:form>
+                     
+                    
+                </center>
                 <h:form>
                     <center>
                     <h:commandButton value="Enviar mensaje" styleClass="btnOtro"  action="CreateMensajes.xhtml" /> 

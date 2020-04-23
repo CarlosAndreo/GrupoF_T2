@@ -10,7 +10,9 @@
         <c:choose>
             <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
                 <h1>Crear nueva PROPUESTA</h1>
-                
+                <center>
+                    
+                    
                 <h:form id="tablaListaActividades" >
                     <table id="tablaListaActividades">
                         <tr>
@@ -51,6 +53,7 @@
                        
                     
                 </h:form>
+                </center>
                 <h:form> 
                     <center>    
                     <h:commandButton value="Enviar solicitud" styleClass="btnAceptar"  action="#{ListaActividades.create(ListaActividades.a)}" /> 

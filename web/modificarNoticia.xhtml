@@ -11,7 +11,10 @@
             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
     
                 <h1 var = "i" value="#{ListaNoticias.noticias}">Modificar Noticia</h1>
-                
+                <center>
+                    
+                    
+                    
                 <h:form id="ListaNoticias">
                     <table id="tablaListaActividades">
                         <td>Código de Actividad: #{i.codNoticia}</td>
@@ -31,6 +34,7 @@
                     
                     </table>
                 </h:form>
+                </center>
                 <h:form> 
                  <!-- Falta el botón de modificar variables -->
                  <center>

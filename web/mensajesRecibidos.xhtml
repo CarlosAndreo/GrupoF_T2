@@ -11,7 +11,8 @@
           
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' ||controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' ||controlAutorizacion.getUsuario().getRol() == 'ALUMNO' ||controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                     <h1 var = "i" value="#{ListaMensajes.mensajes}">Mensajes Recibidos</h1>
-                    
+                    <center>
+                        
                     <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
                         <thead>
@@ -41,6 +42,8 @@
                         </tbody>
                     </table>
                 </div>
+                        
+                    </center>
                     <h:form>
                         <center>
                             <h:commandButton value="Volver Atrás" styleClass="btnCancelar"  action="#{controlAutorizacion.perfilUsuario()}" />
