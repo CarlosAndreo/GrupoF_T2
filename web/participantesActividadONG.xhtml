@@ -5,11 +5,11 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
-    <ui:define name="title">Evaluaciones</ui:define>
+    <ui:define name="title">Participantes</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'GESTOR' }">
-                <h1>EVALUACIONES</h1>
+            <c:when test="#{controlAutorizacion.getUsuario().getRol()=='ORGANIZACION' }">
+                <h1>Participantes en la actividad</h1>
                 <center>
                     
                     
@@ -17,29 +17,25 @@
                     <table id="tablaListaActividades">
                         <thead>
                                 <tr>
-                                        <th>Id Participacion</th>
-                                        <th>Fecha</th>
-                                        <th>Nota</th>
-                                        <th>Comentarios</th>
-                                        <th>Horas dedicadas</th>
-                                        <th>Observaciones</th>
-                                        <th>Estado</th>                         
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>DNI</th>
+                                        <th>Email</th>
+                                                              
                                 </tr>
                             </thead>
                         
                         <tbody>
-                            <ui:repeat var = "i" value="#{Evaluaciones.participaciones}">
+                            <ui:repeat var = "i" value="#{Evaluaciones.usuarios}">
                                 <tr>                                
-                                    <td>#{i.IDParticipacion}</td>
-                                    <td>#{i.fecha}</td>
-                                    <td>#{i.nota}</td>
-                                    <td>#{i.comentariosNota}</td>
-                                    <td>#{i.horasDedicadas}</td>
-                                    <td>#{i.observaciones}</td>
-                                    <td>#{i.estado}</td>
+                                    <td>#{i.nombre}</td>
+                                    <td>#{i.apellidos}</td>
+                                    <td>#{i.DNI}</td>
+                                    <td>#{i.email}</td>
+                              
                                     <td>
                                         <center>
-                                        <h:form> <h:column> <h:commandButton styleClass="email2" value ="Evaluar" action="evaluacion.xhtml"/></h:column></h:form>
+                                        <h:form> <h:column> <h:commandButton styleClass="email2" value ="Valorar" action="valoracionesPrivadas.xhtml"/></h:column></h:form>
                                         </center>
                                         
                                     </td>             
@@ -49,6 +45,16 @@
                     </table>
                 </div>
                 </center>
+                <h:form>
+                 
+                <center>
+                  
+                    <h:column> <h:commandButton value="Volver Atrás"   styleClass="btnCancelar"  action="ActividadesONG.xhtml" /> </h:column> 
+                   
+                    
+                  </center>
+                       
+                </h:form>
             </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>

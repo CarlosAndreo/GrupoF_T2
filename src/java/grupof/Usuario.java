@@ -98,6 +98,17 @@ public class Usuario implements Serializable {
 
     }
     
+
+    public Usuario(String Nombre, String Apellidos, String DNI,String email) {       
+        
+        setNombre(Nombre);
+        setApellidos(Apellidos);
+        setDNI(DNI);
+        setEmail(email);
+     
+
+    }
+    
     public Usuario(String email, String password, Rol rol, Organizacion ong){
         setEmail(email);
         setPassword(password);

@@ -10,7 +10,9 @@
         <c:choose>         
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
                     <h1>Crear una nueva noticia</h1>
-                   
+                    <center>
+                        
+                    
                     <h:form>
                         
                         <table id="tablaListaActividades">
@@ -34,6 +36,8 @@
                         
                        
                     </h:form>
+                            
+                    </center>
                     <h:form>
                         <center>  
                          <h:column> <h:commandButton value="Crear noticia" styleClass="btnAceptar"  action="noticias.xhtml" />  </h:column>

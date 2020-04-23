@@ -40,6 +40,8 @@ import javax.inject.Named;
 @SessionScoped
 public class EvaluacionesController implements Serializable {
     private ArrayList<ParticipacionEnActividad> participaciones;
+    private ArrayList<ParticipacionEnActividad> participacionesValorar;
+    private ArrayList<Usuario> usuarios;
     private Usuario usuario;
     private Actividad actividad;
 
@@ -52,15 +54,6 @@ public class EvaluacionesController implements Serializable {
     public void setParticipaciones(ArrayList<ParticipacionEnActividad> participaciones) {
         this.participaciones = participaciones;
     }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     public Actividad getActividad() {
         return actividad;
     }
@@ -70,15 +63,37 @@ public class EvaluacionesController implements Serializable {
     }
     
     public EvaluacionesController() throws ParseException {
-        participaciones = new ArrayList<>();
-        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
+        usuarios = new ArrayList<>();
+        usuarios.add(new Usuario("Alberto","Mozo","1234567U","amozo@uma.es"));
+         usuarios.add(new Usuario("Alberto","Mozo","1234567U","amozo@uma.es"));
+       
         
+        participaciones = new ArrayList<>();
+        participacionesValorar = new ArrayList<>();
+        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
+       
         participaciones.add(new ParticipacionEnActividad(new Long(1),dateformat3.parse("21/11/2020"), 8 , "Perfe", 16, "Todo perfe","Evaluado"));
         participaciones.add(new ParticipacionEnActividad(new Long(2),dateformat3.parse("22/11/2020"), 7 , "Correcto", 15, "Todo bien","Evaluado"));
         participaciones.add(new ParticipacionEnActividad(new Long(3),dateformat3.parse("23/11/2020"), 6 , "Bien", 13, "Todo perfe","Evaluado"));
         participaciones.add(new ParticipacionEnActividad(new Long(4),dateformat3.parse("24/11/2020"), 9 , "Excelente", 18, "Todo perfe","Evaluado"));
         participaciones.add(new ParticipacionEnActividad(new Long(5),dateformat3.parse("25/11/2020"), 0 , " ", 0, "","No evaluado"));
         p = new ParticipacionEnActividad(new Long(5),dateformat3.parse("25/11/2020"), 0 , " ", 0, "","No evaluado");
+    }
+
+    public ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(ArrayList<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
     
     public String home(){

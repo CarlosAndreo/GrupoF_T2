@@ -34,6 +34,7 @@ public class ParticipacionEnActividad implements Serializable {
     private Integer HorasDedicadas;
     private String Observaciones;
     private String Estado;
+    private Usuario u;
 
 
     public ParticipacionEnActividad(Long IDParticipacion, Date Fecha, Integer Nota, String ComentariosNota, Integer HorasDedicadas, String Observaciones, String Estado) {

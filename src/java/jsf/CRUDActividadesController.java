@@ -31,6 +31,7 @@ public class CRUDActividadesController implements Serializable{
 
 private ArrayList<Actividad> actividades;
 private Usuario usuario;
+private ArrayList<Actividad> misactividades;
 private Actividad actividad;
 private Actividad a = new Actividad();
 
@@ -53,11 +54,20 @@ private Actividad a = new Actividad();
    
     public CRUDActividadesController() throws ParseException{
         actividades = new ArrayList<>();
+        misactividades = new ArrayList<>();
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
 
         actividades.add(new Actividad(new Long(1),"Hands on Kuala Lumpur",dateformat3.parse("21/11/2020"),dateformat3.parse("25/11/2020"),"Kuala Lumpur","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
         actividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("04/07/2020"),dateformat3.parse("25/03/2021"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
+        misactividades.add(new Actividad(new Long(2),"AfricaWorld",dateformat3.parse("04/07/2020"),dateformat3.parse("25/03/2021"),"Tanzania","Actividad correspondiente al lavado de manos","Conocimientos previos del lavado de mano (Curso Lavado de manos de la Complutense)","Voluntariado","Abierta"));
+    }
 
+    public ArrayList<Actividad> getMisactividades() {
+        return misactividades;
+    }
+
+    public void setMisactividades(ArrayList<Actividad> Misactividades) {
+        this.misactividades = Misactividades;
     }
 
     public ArrayList<Actividad> getActividades() {

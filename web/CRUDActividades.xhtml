@@ -71,13 +71,14 @@
                                     <td>                                     
                                         <h:form> <h:column> <h:commandButton styleClass="btnAceptar" value="Modificar" action="#{ListaActividades.modificarActividad()}" /> </h:column> </h:form>
                                     </td>
+                                        
+                                     <td>          
+                                        <h:form> <h:column> <h:commandButton styleClass="email2" value="Inscripciones" action="#{ListaActividades.inscripciones()}" /> </h:column> </h:form>
+                                    </td>   
+
                                     <td>          
                                         <h:form> <h:column> <h:commandButton styleClass="btnCancelar" value="Borrar" action="#{ListaActividades.borrarActividad(i.codActividad)}" /> </h:column> </h:form>
                                     </td>
-
-                                     <td>          
-                                        <h:form> <h:column> <h:commandButton styleClass="btnOtro" value="Inscripciones" action="#{ListaActividades.inscripciones()}" /> </h:column> </h:form>
-                                    </td>   
 
                                     </center> 
                                 </tr>

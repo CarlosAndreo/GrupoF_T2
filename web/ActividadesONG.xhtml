@@ -5,14 +5,17 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
-    <ui:define name="title">Solicitudes rechazadas</ui:define>
+    <ui:define name="title">Mis actividades</ui:define>
     <ui:define name="content">
         <c:choose>
-          
-                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
-                    <h1 var = "i" value="#{ListaSolicitudes.actRechazadas}">Solicitudes rechazadas</h1>
-                   
+      
+            <c:when  test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                 
+                      <h1>MIS ACTIVIDADES</h1>
+                  
+                      <center>
+                          
+                       
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
                         <thead>
@@ -21,36 +24,40 @@
                                         <th>Nombre Actividad</th>
                                         <th>Fecha Inicio</th>
                                         <th>Fecha Fin</th>
+                                        <th>Localización</th>
+                                        <th>Descripción</th>
+                                        <th>Capacidades Necesarias</th>
+                                        <th>Tipo de Actividad</th>
                                         <th>Estado Actividad</th>
-                                        <th>Motivo de la denegación</th>
                                 
                                 </tr>
                             </thead>
                         
                         <tbody>
-                            <ui:repeat var = "i" value="#{ListaSolicitudes.actRechazadas}">
-                                <tr>                         
+                            <ui:repeat var = "i" value="#{ListaActividades.misactividades}">
+                                <tr>                             
                                     <td>#{i.codActividad}</td>
                                     <td>#{i.nombreActividad}</td>
                                     <td>#{i.fechaInicio}</td>
                                     <td>#{i.fechaFin}</td>
-                                    <td>#{i.estadoActividad}</td>
-                                    <td>#{i.motivo}</td>
-                                    
-
-                                     <td>
-                                         <center>  
-                                         <h:form> <h:column> <h:commandButton styleClass="btnOtro"  value="Modificar solicitud" action="modificarSolicitud.xhtml"/> </h:column> </h:form>
-                                         </center>
-                                     </td>
+                                    <td>#{i.localizacion}</td>
+                                    <td>#{i.descripcion}</td>
+                                    <td>#{i.capacidadesNecesarias}</td>
+                                    <td>#{i.tipoActividad}</td>
+                                    <td>#{i.estadoActividad}</td>          
+                                    <td> 
+                                        <center>
+                                        <h:form> <h:column> <h:commandButton styleClass="btnOtro" value="Participantes en Actividad" action="participantesActividadONG.xhtml"/> </h:column> </h:form>
+                                        </center>
+                                    </td>                                    
                                 </tr>
                             </ui:repeat>
                         </tbody>
                     </table>
                 </div>
-               
-                </c:when>
-       
+                   
+                      </center>
+            </c:when>
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>

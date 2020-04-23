@@ -25,9 +25,9 @@ public class ValoracionPrivada implements Serializable {
     private Long id;
     private Integer Puntuacion;
     private String ComentariosONG;
+    private Usuario u;
 
     public ValoracionPrivada(){
-        
     }
     
     public ValoracionPrivada(Long id, Integer Puntuacion, String ComentariosONG) {

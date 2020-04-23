@@ -5,55 +5,67 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 >
      <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
-    <ui:define name="title">ValoracionesPrivadas</ui:define>
+    <ui:define name="title">Valoraciones Privadas</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
-                <h1>Evaluaciones Privadas</h1>
+         <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION'}">
+             
+              
+                    
+                     <h1 var = "i" value="#{Evaluaciones.usuarios}">Valorar participante</h1>
                 <center>
-                                       
-                <div class="bordeTablaActividades">
-                    <table id="tablaListaUsuarios">
-                        <thead>
-                                <tr>
-                                        <th>Id usuario</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
-                                        <th>DNI</th>
-                                        <th>Fecha</th>
-                                        <th>Email</th>
-                                        <th>Horas dedicadas</th>
-                                        <th>Telefono</th>
-                                        <th>Idioma</th>
-                                        <!--<th>Actividad participada</th>-->
-                                </tr>
-                            </thead>
+                   
+                <h:form id="ListaActividades">
+                    <table id="tablaListaActividades">
+                        <tr>
+                             <td>Nombre: 
+                                 </td>
+                            <td>#{i.nombre}</td>
+                            
+                        </tr>
+                       
+                        <tr>
+                            
                         
-                        <tbody>
-                            <ui:repeat var = "i" value="#{controlAutorizacion.usuario}">
-                                <tr>                                
-                                    <td>#{i.userID}</td>
-                                    <td>#{i.nombre}</td>
-                                    <td>#{i.apellidos}</td>
-                                    <td>#{i.DNI}</td>
-                                    <td>#{i.fechaNacimiento}</td>
-                                    <td>#{i.email}</td>
-                                    <td>#{i.telefono}</td>
-                                    <td>#{i.idioma}</td>
-                                    
-                                    <td>
-                                        <center>
-                                        <h:form> <h:column> <h:commandButton styleClass="email2" value ="Evaluar" action="evaluacion.xhtml"/></h:column></h:form>
-                                        </center>
-                                        
-                                    </td>             
-                                </tr>
-                            </ui:repeat>
-                        </tbody>
+                            <td>Apellido: 
+                            </td>
+                            <td>#{i.apellidos} </td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td>DNI:</td>
+                            <td>#{i.DNI}</td>
+                        </tr>
+                           
+                        <tr>
+                            <td>Email:</td>
+                            
+                                 <td>#{i.email}</td>
+                        </tr>
+                        <tr>
+                           <td>Puntuacion:</td>
+                           <td><h:inputText  value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Comentarios:</td>   
+                             <td><h:inputText  value=""/></td>
+                        </tr>
                     </table>
-                </div>
+                </h:form>
+                     
                 </center>
+                <h:form> 
+                    <center>    
+                    <h:commandButton value="Enviar Valoración" styleClass="btnAceptar"  action="#" /> 
+                  
+                 
+                    
+                    <h:commandButton value="Cancelar Valoración" styleClass="btnCancelar"  action="participantesActividadONG.xhtml" /> 
+                    </center> 
+                </h:form>
             </c:when>
+           
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>
