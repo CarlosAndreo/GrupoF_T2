@@ -53,7 +53,7 @@ public class Login {
        usuarios.add(new Usuario(new Long(1), "ALUMNO", "MARTINEZ", "alumno", dateformat3.parse("05/03/2020"), "12456478W", "alumno@uma.es", "Avenida wela", "Es un pipas", 12345679, "Espaniol", Rol.ALUMNO)); 
        usuarios.add(new Usuario(new Long(2), "PDI", "", "pdi", dateformat3.parse("05/03/2020"), "12456478W", "pdi@uma.es", "paseo de los moros", "si", 12345679, "Espaniol", Rol.PDI)); 
        usuarios.add(new Usuario(new Long(3), "PAS", "", "pas", dateformat3.parse("05/03/2020"), "12456478W", "pas@uma.es", "jefaso avenido", "si", 12345679, "Espaniol", Rol.PAS));
-       usuarios.add(new Usuario(new Long(4),"admin@mail.com","admin",Rol.GESTOR));
+       usuarios.add(new Usuario(new Long(4),"admin@uma.es","admin",Rol.GESTOR));
        org =  new Organizacion(new Long(6), "Bebesita", "Madrid", "Salvar vidas contra Coronavirus");
        usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }
