@@ -1,0 +1,44 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                >
+     <link rel="shortcut icon" type="image/x-icon" href="./resources/img/favicon.ico"/>
+    <ui:define name="title">ValoracionesPublicas</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() != null}">
+                <h1>Valoraciones Públicas</h1>
+                <h1 var = "i" value="#{ValoracionesPublicas.v}"></h1>     
+                <center>
+                    
+                    
+                <h:form id="Valoracion">
+                    <table id="tablaListaActividades">
+                        <tr>
+                           <td>Calificacion</td>
+                           <td><h:inputText  value="#{i.calificacion}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Comentarios</td>   
+                             <td><h:inputText  value="#{i.comentariosUsuarios}"/></td>
+                        </tr>
+                    </table>
+                    </h:form>
+                    
+                </center>
+                <h:form>
+                    <center>
+                     <h:commandButton styleClass="btnAceptar" value ="Aceptar" action="#{ValoracionesPublicas.crear()}"/>
+                     <h:commandButton styleClass="btnCancelar" value ="Volver Atrás" action="CRUDActividades.xhtml"/>
+                    </center>
+                </h:form>
+                    
+            </c:when>
+            <c:otherwise>
+                <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+</ui:composition>
