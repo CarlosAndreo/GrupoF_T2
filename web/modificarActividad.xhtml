@@ -8,7 +8,7 @@
     <ui:define name="title">Modificar Actividad</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI'  }">
     
                 <h1 var = "i" value="#{ListaActividades.actividades}">Modificar Actividad</h1>
                 <center>
