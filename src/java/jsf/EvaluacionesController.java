@@ -64,8 +64,8 @@ public class EvaluacionesController implements Serializable {
     
     public EvaluacionesController() throws ParseException {
         usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("Alberto","Mozo","1234567U","amozo@uma.es"));
-         usuarios.add(new Usuario("Alberto","Mozo","1234567U","amozo@uma.es"));
+        usuarios.add(new Usuario("Alberto","Aguilera","1234567U","aguil@uma.es"));
+         usuarios.add(new Usuario("Paco","Martinez","1872237U","pam@uma.es"));
        
         
         participaciones = new ArrayList<>();
