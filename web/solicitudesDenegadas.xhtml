@@ -12,7 +12,8 @@
                 <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                     <h1 var = "i" value="#{ListaSolicitudes.actRechazadas}">Solicitudes rechazadas</h1>
                    
-                
+                    <center>
+                       
                 <div class="bordeTablaActividades">
                     <table id="tablaListaActividades">
                         <thead>
@@ -48,7 +49,9 @@
                         </tbody>
                     </table>
                 </div>
-               
+                
+                        
+                    </center>
                 </c:when>
        
             <c:otherwise>
