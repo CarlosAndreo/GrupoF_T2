@@ -32,8 +32,8 @@ public class NoticiasController implements Serializable{
     public NoticiasController() throws ParseException{
         SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
         noticias = new ArrayList<>();
-        Noticia notice = new Noticia(new Long(1), "El coronaviru", "Sa moerto mucha gente por coronaviru", dateformat3.parse("02/07/2020"));
-        Noticia notice2 = new Noticia(new Long(2), "PORVORAAAAAAAAA", "Eso es lo mehón que hay", dateformat3.parse("05/03/2020"));
+        Noticia notice = new Noticia(new Long(1), "CORONAVIRUS", "Se empieza a levantar un poco el confinamiento", dateformat3.parse("02/07/2020"));
+        Noticia notice2 = new Noticia(new Long(2), "MADRID NECESITA COMIDA", "Debido al coronavirus", dateformat3.parse("05/03/2020"));
         
         noticias.add(notice); 
         noticias.add(notice2);   
