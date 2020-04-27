@@ -17,7 +17,7 @@
                         <tr>
                             <td>Código de proyecto: </td>
 
-                            <td><h:inputText  value="#{controlAutorizacion.org.codProyecto}"/></td>
+                            <td><h:outputText  value="#{controlAutorizacion.org.codProyecto}"/></td>
                         </tr>
                         
                         <tr>
@@ -137,50 +137,7 @@
                 </h:form>
                    
             </c:when>
-             <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
-                  <h1>PERFIL DE GESTOR</h1>
-                  <center>
-                      
-                      
-                <h:form id="PerfilUsuario">
-                    <table id="tablaListaActividades">                    
-                        <tr>
-                            <td>Código de usuario: </td>
-
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.userID}"/></td>
-                        </tr>
-                        
-                      
-                       
-                        <tr>
-                            <td>Email: </td>
-
-                            <td><h:inputText  value="#{controlAutorizacion.usuario.email}"/></td>
-                        </tr>
-                         <tr>
-                            <td>Contraseña: </td>
-
-                            <td><h:inputText  value="#{controlAutorizacion.usuario.password}"/></td>
-                        </tr>
-                        
-                 
-                        <tr>
-                            <td>Rol: </td>
-
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
-                        </tr>
-                    </table>
-                </h:form>
-                  </center>
-                <h:form>
-                    <center>
-                    <h:column> <h:commandButton styleClass="btnAceptar"  value="Guardar cambios"/> </h:column> 
-                    <h:column> <h:commandButton styleClass="btnCancelar"  value="Cancelar" action="miPerfilUsuario.xhtml" /> </h:column>  
-                    </center>
-                </h:form>
-                   
-            </c:when>
-          
+           
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>
             </c:otherwise>

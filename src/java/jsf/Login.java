@@ -9,7 +9,7 @@ package jsf;
 import grupof.Usuario;
 import grupof.Usuario.Rol;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
-import grupof.Gestor;
+
 import grupof.Organizacion;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,7 +53,7 @@ public class Login {
        usuarios.add(new Usuario(new Long(1), "ALUMNO", "MARTINEZ", "alumno", dateformat3.parse("05/03/2020"), "12456478W", "alumno@uma.es", "Avenida Casa Lorin", "Ingeniero Informatico", 12345679, "Espaniol", Rol.ALUMNO)); 
        usuarios.add(new Usuario(new Long(2), "PDI", "", "pdi", dateformat3.parse("05/03/2020"), "12456478W", "pdi@uma.es", "paseo de los moros", "si", 12345679, "Espaniol", Rol.PDI)); 
        usuarios.add(new Usuario(new Long(3), "PAS", "", "pas", dateformat3.parse("05/03/2020"), "12456478W", "pas@uma.es", "jefaso avenido", "si", 12345679, "Espaniol", Rol.PAS));
-       usuarios.add(new Usuario(new Long(4),"admin@uma.es","admin",Rol.GESTOR));
+      
        org =  new Organizacion(new Long(6), "Unicef", "Madrid", "Salvar vidas de las personas en malas condiciones");
        usuarios.add(new Usuario("org@uma.es", "org", Rol.ORGANIZACION, org));
     }

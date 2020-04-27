@@ -9,7 +9,7 @@
     <ui:define name="title">Redactar un nuevo mensaje</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'GESTOR'   ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
+            <c:when test="#{controlAutorizacion.usuario.rol == 'ORGANIZACION' || controlAutorizacion.usuario.rol == 'PDI'||controlAutorizacion.usuario.rol == 'PAS' ||controlAutorizacion.usuario.rol == 'ALUMNO' }">
                 <h1>Redactar nuevo mensaje</h1>
                 <center>
                    

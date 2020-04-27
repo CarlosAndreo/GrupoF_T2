@@ -8,7 +8,7 @@
     <ui:define name="title">Noticias</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI'}">
                 <h1>LISTA NOTICIAS</h1>  
 
                 <center>
@@ -74,7 +74,7 @@
                
             </c:when>
             
-            <c:when  test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS'}">
+            <c:when  test="#{controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'PAS'  || controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
                 
                       <h1>LISTA NOTICIAS</h1>
         

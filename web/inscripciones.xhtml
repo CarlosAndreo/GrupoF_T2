@@ -8,7 +8,7 @@
     <ui:define name="title">Incripciones</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI' }">
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' }">
                 <h1>INSCRIPCIONES</h1>
                 <center>
                     

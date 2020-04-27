@@ -9,41 +9,6 @@
     <ui:define name="content">
         <c:choose>
             
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
-                  <h1>PERFIL DE GESTOR</h1>
-                  
-                  <center>
-                     
-                
-                <h:form id="controlAutorizacion">
-                     <table id="tablaListaActividades">
-              
-                        <tr>
-                            <td>Código de usuario: </td>
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.userID}"/></td>
-                        </tr>     
-                        <tr>
-                            <td>Email: </td>
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.email}"/></td>
-                        </tr>                     
-                        <tr>
-                            <td>Rol: </td>
-                            <td><h:outputText  value="#{controlAutorizacion.usuario.rol}"/></td>
-                        </tr>        
-                    </table>
-                </h:form>
-                       
-                  </center>
-                <h:form> 
-                <center>     
-                    <h:commandButton styleClass="btnAceptar"  value="Modificar perfil" action="modificarPerfilUsuario.xhtml" />
-                    <h:commandButton styleClass="btnCancelar"  value="Borrar perfil" action="#" /> 
-                    <h:commandButton styleClass="btnOtro"  value="Redactar nuevo mensaje" action="CreateMensajes.xhtml" /> 
-                    <h:commandButton styleClass="email2"  value="Mensajes recibidos" action="mensajesRecibidos.xhtml" />    
-                </center>
-                </h:form>
-               
-            </c:when>
             
             
                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO'}">

@@ -8,7 +8,7 @@
     <ui:define name="title">Ver mensaje</ui:define>
     <ui:define name="content">
         <c:choose>
-            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'GESTOR'|| controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
+            <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI' || controlAutorizacion.getUsuario().getRol() == 'PAS' || controlAutorizacion.getUsuario().getRol() == 'ALUMNO' || controlAutorizacion.getUsuario().getRol() == 'ORGANIZACION'}">
         
                 <h1 var = "i" value="#{ListaMensajes.mensajes}">Ver Mensaje</h1>             
                 <center>

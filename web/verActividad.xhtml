@@ -73,67 +73,7 @@
                 </h:form>
                  
             </c:when>
-                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR'}">
-                        <h1 var = "i" value="#{ListaActividades.actividades}">Ver Actividad</h1>
-                        <center>
-                            
-                            
-                        <h:form id="ListaActividades">
-                         <table id="tablaListaActividades">
-                             <td>Código de Actividad: #{i.codActividad}</td>
-                             <tr>
-                                 <td>Nombre Actividad: </td>
-
-                                 <td><h:outputText  value="#{i.nombreActividad}"/></td>
-                             </tr>
-
-                             <tr>
-                                 <td>Fecha Inicio: </td>
-                                 <td><h:outputText  value="#{i.fechaInicio}"/></td>
-                             </tr>
-
-                             <tr>
-                                 <td>Fecha Fin: </td>
-                                 <td><h:outputText  value="#{i.fechaFin}"/></td>
-                             </tr>
-
-                             <tr>
-                                 <td>Localización: </td>
-                                 <td><h:outputText  value="#{i.localizacion}"/></td>
-                             </tr>
-
-                             <tr>
-                                 <td>Descripción: </td>
-                                 <td><h:outputText  value="#{i.descripcion}"/></td>
-                             </tr>      
-
-
-                             <tr>
-                                 <td>Capacidades necesarias: </td>
-                                 <td><h:outputText  value="#{i.capacidadesNecesarias}"/></td>
-                             </tr>  
-
-                             <tr>
-                                 <td>Tipo de actividad: </td>
-                                 <td><h:outputText  value="#{i.tipoActividad}"/></td>
-                             </tr>  
-
-                             <tr>
-                                 <td>Estado de la actividad: </td>
-                                 <td><h:outputText  value="#{i.estadoActividad}"/></td>
-                             </tr>
-
-                         </table>
-                     </h:form>
-                        </center>
-                     <h:form> 
-                       <br/>
-                       <center>
-                         <h:commandButton value="Volver Atrás"  styleClass="btnCancelar"  action="CRUDActividades.xhtml" /> 
-                       </center>
-                     </h:form>
-                 
-                </c:when>
+            
        
             <c:otherwise>
                 <ui:include src="/WEB-INF/templates/errorAutorizacion.xhtml"/>

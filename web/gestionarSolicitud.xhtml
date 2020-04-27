@@ -9,7 +9,7 @@
     <ui:define name="content">
         <c:choose>
         
-                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'GESTOR' || controlAutorizacion.getUsuario().getRol() == 'PDI'}">
+                <c:when test="#{controlAutorizacion.getUsuario().getRol() == 'PDI'}">
                     <h1 var = "i" value="#{ListaSolicitudes.actividades}">Gestionar solicitud</h1>
                     <center>
                       
