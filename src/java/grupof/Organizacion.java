@@ -28,10 +28,31 @@ public class Organizacion implements Serializable {
     private String Nombre;
     private String Sede;
     private String proposito;
-    @OneToMany
+    @OneToMany(mappedBy="creadorONG")
     private List<Actividad> Actividades;
-    @OneToMany
+    @OneToMany(mappedBy="valoracionONG")
     private List<ValoracionPrivada> valoraciones;
+    @OneToMany
+    private List<Noticia> noticias;
+
+     @OneToMany(mappedBy="creadorNoticia")
+    private List<Noticia> noticiasCreadas;
+     
+    public List<Noticia> getNoticias() {
+        return noticias;
+    }
+
+    public List<Noticia> getNoticiasCreadas() {
+        return noticiasCreadas;
+    }
+
+    public void setNoticiasCreadas(List<Noticia> noticiasCreadas) {
+        this.noticiasCreadas = noticiasCreadas;
+    }
+
+    public void setNoticias(List<Noticia> noticias) {
+        this.noticias = noticias;
+    }
     
     public Organizacion(String nombre){
         this.Nombre = nombre;

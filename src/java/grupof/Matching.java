@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 /**
  * SII
@@ -33,6 +34,16 @@ public class Matching implements Serializable {
     private String AmbitoActividad;
     @ManyToMany(mappedBy ="matching")
     private List<Actividad> Actividades;
+    @ManyToOne
+    private Usuario usuarioFiltro;
+
+    public Usuario getUsuarioFiltro() {
+        return usuarioFiltro;
+    }
+
+    public void setUsuarioFiltro(Usuario usuarioFiltro) {
+        this.usuarioFiltro = usuarioFiltro;
+    }
     
     public Long getId() {
         return id;

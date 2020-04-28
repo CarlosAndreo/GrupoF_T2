@@ -23,6 +23,25 @@ public class PDI extends Usuario implements Serializable{
     private Long CodActividad;
     @ManyToMany(mappedBy ="PDI")
     private List<Asignatura> Asignaturas;
+    @OneToMany(mappedBy="revisar")
+    private List<Actividad> ActividadesRevisadas;
+
+    public Long getUserID() {
+        return UserID;
+    }
+
+    public void setUserID(Long UserID) {
+        this.UserID = UserID;
+    }
+
+    public List<Actividad> getActividadesRevisadas() {
+        return ActividadesRevisadas;
+    }
+
+    public void setActividadesRevisadas(List<Actividad> ActividadesRevisadas) {
+        this.ActividadesRevisadas = ActividadesRevisadas;
+    }
+   
 
     public Long getCodPDI() {
         return UserID;

@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
     }
    
     public enum Rol{
-        PDI,PAS,ALUMNO,GESTOR, ORGANIZACION
+        PDI,PAS,ALUMNO, ORGANIZACION
      
     };
     
@@ -52,17 +52,37 @@ public class Usuario implements Serializable {
     private Integer telefono;
     private String idioma;
     private Rol Rol;
-    @OneToMany
-    private List<ParticipacionEnActividad> participantes;
-    @OneToMany//Entidad debil
+    @OneToMany(mappedBy="participaciones")
+    private List<ParticipacionEnActividad> participaciones;
+    @OneToMany(mappedBy="usuarioFiltro")
     private List<Matching> matching;
-    @OneToMany
+    @OneToMany(mappedBy="emisor")
     private List<Mensaje> mensajes;
-    @OneToMany
+    @ManyToOne
+    private Mensaje receptor;
+    
+    
+    @OneToMany(mappedBy="usuariovalorado")
     private List<ValoracionPrivada> valoraciones;
-    @OneToMany
+    @OneToMany(mappedBy="creador")
     private List<ValoracionPublica> valoracionesPublicas;
     private Organizacion org;
+
+    public List<ParticipacionEnActividad> getParticipaciones() {
+        return participaciones;
+    }
+
+    public void setParticipaciones(List<ParticipacionEnActividad> participaciones) {
+        this.participaciones = participaciones;
+    }
+
+    public Mensaje getReceptor() {
+        return receptor;
+    }
+
+    public void setReceptor(Mensaje receptor) {
+        this.receptor = receptor;
+    }
     
     public Usuario(Long cod,String email,String pass,Rol rol){
         setUserID(cod);
@@ -229,11 +249,11 @@ public class Usuario implements Serializable {
     }
 
     public List<ParticipacionEnActividad> getParticipantes() {
-        return participantes;
+        return participaciones;
     }
 
     public void setParticipantes(List<ParticipacionEnActividad> participantes) {
-        this.participantes = participantes;
+        this.participaciones = participantes;
     }
 
     public List<Matching> getMatching() {

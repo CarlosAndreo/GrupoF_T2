@@ -5,12 +5,15 @@
  */
 package grupof;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -26,12 +29,37 @@ public class Mensaje implements Serializable {
     private Long IDMensaje;
     private String Texto;
     private String Asunto;
-    private String emisor;
+    private String emisorA;
     private String receptor;
+    private Boolean leido;
+    private Date fechaLeido;
+
+   
     
-    
-    @OneToMany
+    @OneToMany(mappedBy="receptor")
     private List<Usuario> Usuarios;
+    
+    @ManyToOne
+    private Usuario emisor;
+
+    public String getEmisorA() {
+        return emisorA;
+    }
+
+    public void setEmisorA(String emisorA) {
+        this.emisorA = emisorA;
+    }
+
+    public Usuario getEmisor() {
+        return emisor;
+    }
+
+    public void setEmisor(Usuario emisor) {
+        this.emisor = emisor;
+    }
+
+  
+    
 
     public Long getIDMensaje() {
         return IDMensaje;
@@ -40,7 +68,30 @@ public class Mensaje implements Serializable {
     public void setIDMensaje(Long IDMensaje) {
         this.IDMensaje = IDMensaje;
     }
+    public Boolean getLeido() {
+        return leido;
+    }
 
+    public void setLeido(Boolean leido) {
+        this.leido = leido;
+    }
+
+    public Date getFechaLeido() {
+        return fechaLeido;
+    }
+
+    public void setFechaLeido(Date fechaLeido) {
+        this.fechaLeido = fechaLeido;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return Usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> Usuarios) {
+        this.Usuarios = Usuarios;
+    }
+    
     public String getTexto() {
         return Texto;
     }
@@ -57,14 +108,7 @@ public class Mensaje implements Serializable {
         this.Asunto = Asunto;
     }
 
-    public String getEmisor() {
-        return emisor;
-    }
-
-    public void setEmisor(String emisor) {
-        this.emisor = emisor;
-    }
-
+  
     public String getReceptor() {
         return receptor;
     }
@@ -80,7 +124,7 @@ public class Mensaje implements Serializable {
     }
 public Mensaje(Long id,String e,String r,String a,String txt){
     setIDMensaje(id);
-    setEmisor(e);
+    setEmisorA(e);
     setReceptor(r);
     setAsunto(a);
     setTexto(txt);

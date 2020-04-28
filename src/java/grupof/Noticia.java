@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * SII
@@ -27,8 +28,11 @@ public class Noticia implements Serializable {
     private String Titulo;
     private String Descripcion;
     private Date fecha;
-    
-    //public void crearNoticia()
+    @ManyToOne
+    private Organizacion ong;
+    @ManyToOne
+    private Organizacion creadorNoticia;
+  
    
     public Noticia(){
         
@@ -38,6 +42,22 @@ public class Noticia implements Serializable {
         this.Titulo = Titulo;
         this.Descripcion = Descripcion;
         this.fecha = fecha;
+    }
+
+    public Organizacion getCreadorNoticia() {
+        return creadorNoticia;
+    }
+
+    public void setCreadorNoticia(Organizacion creadorNoticia) {
+        this.creadorNoticia = creadorNoticia;
+    }
+
+    public Organizacion getOng() {
+        return ong;
+    }
+
+    public void setOng(Organizacion ong) {
+        this.ong = ong;
     }
     
 public void crearNoticia(Noticia n, int tam){

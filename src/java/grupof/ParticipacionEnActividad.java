@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
 /**
@@ -34,7 +36,14 @@ public class ParticipacionEnActividad implements Serializable {
     private Integer HorasDedicadas;
     private String Observaciones;
     private String Estado;
-    private Usuario u;
+   
+    @ManyToOne
+    private Actividad participantes;
+    @ManyToOne
+    private Usuario participaciones;
+   
+  
+    
 
 
     public ParticipacionEnActividad(Long IDParticipacion, Date Fecha, Integer Nota, String ComentariosNota, Integer HorasDedicadas, String Observaciones, String Estado) {
@@ -45,6 +54,22 @@ public class ParticipacionEnActividad implements Serializable {
         this.HorasDedicadas = HorasDedicadas;
         this.Observaciones = Observaciones;
         this.Estado = Estado;
+    }
+
+    public Actividad getParticipantes() {
+        return participantes;
+    }
+
+    public void setParticipantes(Actividad participantes) {
+        this.participantes = participantes;
+    }
+
+    public Usuario getParticipaciones() {
+        return participaciones;
+    }
+
+    public void setParticipaciones(Usuario participaciones) {
+        this.participaciones = participaciones;
     }
 
     public Date getFecha() {
@@ -66,6 +91,7 @@ public class ParticipacionEnActividad implements Serializable {
     public Integer getNota() {
         return Nota;
     }
+
 
     public void setNota(Integer Nota) {
         this.Nota = Nota;

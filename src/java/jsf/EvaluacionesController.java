@@ -101,10 +101,7 @@ public class EvaluacionesController implements Serializable {
         if(getUsuario()==null){
             return "login.xhtml";
         }
-        //Usuario GESTOR
-        if(getUsuario().getRol().equals(getUsuario().getRol().GESTOR)){
-            return "CRUDActividadesController.xhtml";
-        }
+       
         return null;
     }
     

@@ -34,27 +34,25 @@ public class Actividad implements Serializable {
     private String EstadoSolicitud;
     private String motivo;
     private Organizacion ong;
-    @OneToMany
+    @ManyToOne
+    private Organizacion creadorONG;
+    @OneToMany(mappedBy="participantes")
     private List<ParticipacionEnActividad> participantes;
-    @OneToMany
+    @OneToMany(mappedBy="act")
     private List<ValoracionPublica> Valoracion;
     @ManyToMany
     @JoinTable(name="jnd_matc_act",joinColumns=@JoinColumn(name="actividad_fk"),inverseJoinColumns=@JoinColumn(name="matching_fk"))
     private List<Matching> matching;
-    @OneToMany
+    @OneToMany(mappedBy="a")
     private List<Asignatura> Asignaturas;
+    @ManyToOne
+    private PDI revisar;
     
     public Actividad(){
         
     }
 
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
+  
 
     public Actividad(Long CodActividad, Integer Puntuacion, Date FechaInicio, Date FechaFin, String Localizacion, String Descripcion, String CapacidadesNecesarias, String EstadoActividad, String TipoActividad, String NombreActividad, String EstadoSolicitud, List<ParticipacionEnActividad> participantes, List<ValoracionPublica> Valoracion, List<Matching> matching, List<Asignatura> Asignaturas) {
         this.CodActividad = CodActividad;
@@ -133,13 +131,21 @@ public class Actividad implements Serializable {
         
           
     }
-    
+
     public Long getCodActividad() {
         return CodActividad;
     }
 
     public void setCodActividad(Long CodActividad) {
         this.CodActividad = CodActividad;
+    }
+
+    public Integer getPuntuacion() {
+        return Puntuacion;
+    }
+
+    public void setPuntuacion(Integer Puntuacion) {
+        this.Puntuacion = Puntuacion;
     }
 
     public Date getFechaInicio() {
@@ -214,6 +220,30 @@ public class Actividad implements Serializable {
         this.EstadoSolicitud = EstadoSolicitud;
     }
 
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public Organizacion getOng() {
+        return ong;
+    }
+
+    public void setOng(Organizacion ong) {
+        this.ong = ong;
+    }
+
+    public Organizacion getCreadorONG() {
+        return creadorONG;
+    }
+
+    public void setCreadorONG(Organizacion creadorONG) {
+        this.creadorONG = creadorONG;
+    }
+
     public List<ParticipacionEnActividad> getParticipantes() {
         return participantes;
     }
@@ -228,14 +258,6 @@ public class Actividad implements Serializable {
 
     public void setValoracion(List<ValoracionPublica> Valoracion) {
         this.Valoracion = Valoracion;
-    }
-
-    public Integer getPuntuacion() {
-        return Puntuacion;
-    }
-
-    public void setPuntuacion(Integer Puntuacion) {
-        this.Puntuacion = Puntuacion;
     }
 
     public List<Matching> getMatching() {
@@ -254,14 +276,15 @@ public class Actividad implements Serializable {
         this.Asignaturas = Asignaturas;
     }
 
-    public Organizacion getOng() {
-        return ong;
+    public PDI getRevisar() {
+        return revisar;
     }
 
-    public void setOng(Organizacion ong) {
-        this.ong = ong;
+    public void setRevisar(PDI revisar) {
+        this.revisar = revisar;
     }
-  
+    
+   
     @Override
     public int hashCode() {
         int hash = 0;

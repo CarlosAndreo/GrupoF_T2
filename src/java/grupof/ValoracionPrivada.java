@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * SII
@@ -26,8 +27,37 @@ public class ValoracionPrivada implements Serializable {
     private Integer Puntuacion;
     private String ComentariosONG;
     private Usuario u;
-
+ @ManyToOne
+ private Usuario usuariovalorado;
+ 
+ @ManyToOne
+ private Organizacion valoracionONG;
+ 
     public ValoracionPrivada(){
+    }
+
+    public Usuario getU() {
+        return u;
+    }
+
+    public void setU(Usuario u) {
+        this.u = u;
+    }
+
+    public Usuario getUsuariovalorado() {
+        return usuariovalorado;
+    }
+
+    public void setUsuariovalorado(Usuario usuariovalorado) {
+        this.usuariovalorado = usuariovalorado;
+    }
+
+    public Organizacion getValoracionONG() {
+        return valoracionONG;
+    }
+
+    public void setValoracionONG(Organizacion valoracionONG) {
+        this.valoracionONG = valoracionONG;
     }
     
     public ValoracionPrivada(Long id, Integer Puntuacion, String ComentariosONG) {

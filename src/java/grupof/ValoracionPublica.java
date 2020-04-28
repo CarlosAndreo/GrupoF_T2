@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * SII
@@ -25,11 +26,39 @@ public class ValoracionPublica implements Serializable {
     private Long IDValoracion;
     private Integer Calificacion;
     private String ComentariosUsuario;
-
+    @ManyToOne
+    private Usuario creador;
+    
+    @ManyToOne
+    private Actividad act;
     private Long ID = new Long(1);
     
     public ValoracionPublica() {
         
+    }
+
+    public Usuario getCreador() {
+        return creador;
+    }
+
+    public void setCreador(Usuario creador) {
+        this.creador = creador;
+    }
+
+    public Actividad getAct() {
+        return act;
+    }
+
+    public void setAct(Actividad act) {
+        this.act = act;
+    }
+
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
     }
     
     public ValoracionPublica(Long id){

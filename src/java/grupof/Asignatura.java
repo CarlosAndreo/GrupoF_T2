@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 /**
  * SII
@@ -33,6 +34,17 @@ public class Asignatura implements Serializable {
     @ManyToMany
     @JoinTable(name="asig_pdi",joinColumns=@JoinColumn(name="pdi_fk"),inverseJoinColumns=@JoinColumn(name="asignatura_fk"))
     private List<PDI> PDI;
+    @ManyToOne
+    private Actividad a;
+
+    
+    public Actividad getA() {
+        return a;
+    }
+
+    public void setA(Actividad a) {
+        this.a = a;
+    }
     
     public Long getCodAsignatura() {
         return CodAsignatura;

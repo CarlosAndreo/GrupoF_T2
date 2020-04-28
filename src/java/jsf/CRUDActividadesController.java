@@ -138,11 +138,8 @@ private Actividad a = new Actividad();
         if(getUsuario()==null){
             return "login.xhtml";
         }
-        //Usuario GESTOR
-        if(getUsuario().getRol().equals(getUsuario().getRol().GESTOR)){
-            return "CRUDActividadesController.xhtml";
-        }
-        return null;
+    return null;
+       
     }
     public String logout(){
         FacesContext ctx = FacesContext.getCurrentInstance();
